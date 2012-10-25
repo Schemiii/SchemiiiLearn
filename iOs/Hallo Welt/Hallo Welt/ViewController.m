@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  RefreshKnowlegde
+//  Hallo Welt
 //
 //  Created by Daniel Schmidt on 25.10.12.
 //  Copyright (c) 2012 Daniel Schmidt. All rights reserved.
@@ -14,6 +14,11 @@
 
 @implementation ViewController
 
+- (void)btnCopy:(id)sender{
+  [self.lblText setText:[self.txtText text]];
+  NSLog(@"Copy Text : \"%@\" to Label",[self.txtText text]);
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,17 +31,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)asd:(id)sender {
-}
-
-- (IBAction)btnConvertBin:(id)sender {
-}
-
-- (IBAction)btnConvertToBin:(id)sender {
-}
-
-- (IBAction)CopyText:(id)sender {
-}
-- (IBAction)btnCopy:(id)sender {
-}
 @end
