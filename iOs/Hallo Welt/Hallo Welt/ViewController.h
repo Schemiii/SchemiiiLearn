@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 - (IBAction)btnCopy:(id)sender;
+- (IBAction)btnConvert:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *txtText;
 @property (weak, nonatomic) IBOutlet UILabel *lblText;
 

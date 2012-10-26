@@ -26,7 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnConvert:(id)sender {
+}
+
 - (IBAction)asd:(id)sender {
+}
+
+- (IBAction)btnConvert:(id)sender {
 }
 
 - (IBAction)btnConvertBin:(id)sender {

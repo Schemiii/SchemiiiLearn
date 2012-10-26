@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)btnConvert:(id)sender;
 - (IBAction)asd:(id)sender;
+- (IBAction)btnConvert:(id)sender;
 - (IBAction)btnConvertBin:(id)sender;
 - (IBAction)btnConvertToBin:(id)sender;
 - (IBAction)CopyText:(id)sender;

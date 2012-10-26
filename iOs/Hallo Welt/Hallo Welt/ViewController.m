@@ -19,6 +19,9 @@
   NSLog(@"Copy Text : \"%@\" to Label",[self.txtText text]);
 }
 
+- (IBAction)btnConvert:(id)sender {
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

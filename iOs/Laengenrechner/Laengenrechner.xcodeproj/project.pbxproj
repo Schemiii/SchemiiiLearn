@@ -18,6 +18,7 @@
 		DE2C435C16397A10008E6659 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE2C435B16397A10008E6659 /* Default-568h@2x.png */; };
 		DE2C435F16397A10008E6659 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2C435D16397A10008E6659 /* MainStoryboard.storyboard */; };
 		DE2C436216397A10008E6659 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2C436116397A10008E6659 /* ViewController.m */; };
+		DE45A6CE163A8BD500A0B4D7 /* LengthCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45A6CD163A8BD500A0B4D7 /* LengthCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		DE2C435E16397A10008E6659 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DE2C436016397A10008E6659 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DE2C436116397A10008E6659 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DE45A6CC163A8BD500A0B4D7 /* LengthCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LengthCalculator.h; sourceTree = "<group>"; };
+		DE45A6CD163A8BD500A0B4D7 /* LengthCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LengthCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				DE2C435D16397A10008E6659 /* MainStoryboard.storyboard */,
 				DE2C436016397A10008E6659 /* ViewController.h */,
 				DE2C436116397A10008E6659 /* ViewController.m */,
+				DE45A6CC163A8BD500A0B4D7 /* LengthCalculator.h */,
+				DE45A6CD163A8BD500A0B4D7 /* LengthCalculator.m */,
 				DE2C434C16397A10008E6659 /* Supporting Files */,
 			);
 			path = Laengenrechner;
@@ -176,6 +181,7 @@
 				DE2C435216397A10008E6659 /* main.m in Sources */,
 				DE2C435616397A10008E6659 /* AppDelegate.m in Sources */,
 				DE2C436216397A10008E6659 /* ViewController.m in Sources */,
+				DE45A6CE163A8BD500A0B4D7 /* LengthCalculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +300,7 @@
 				DE2C436716397A10008E6659 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

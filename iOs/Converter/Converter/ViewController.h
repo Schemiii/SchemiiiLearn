@@ -14,4 +14,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblOutput;
 @property (weak, nonatomic) IBOutlet UITextField *txtInput;
 
+- (IBAction)Convert:(id)sender;
 @end
