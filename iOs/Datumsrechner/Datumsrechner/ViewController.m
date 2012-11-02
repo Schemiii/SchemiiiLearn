@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  RefreshKnowlegde
+//  Datumsrechner
 //
-//  Created by Daniel Schmidt on 25.10.12.
+//  Created by Daniel Schmidt on 02.11.12.
 //  Copyright (c) 2012 Daniel Schmidt. All rights reserved.
 //
 
@@ -26,29 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)btnConvert:(id)sender {
+-(void)btnCalcDateDifference:(id)sender{
+  //Test
+  NSDate *now = [NSDate date];
+  NSLog(@"%@",now);
+  
+}
+-(void)btnPickDate:(id)sender{
+  
 }
 
-- (IBAction)asd:(id)sender {
-}
-
-- (IBAction)btnConvert:(id)sender {
-}
-
-- (IBAction)btnConvertBin:(id)sender {
-}
-
-- (IBAction)btnCalcDateDifference:(id)sender {
-}
-
-- (IBAction)btnConvertToBin:(id)sender {
-}
-
-- (IBAction)CopyText:(id)sender {
-}
-
-- (IBAction)btnCalcDateDifference:(id)sender {
-}
-- (IBAction)btnCopy:(id)sender {
-}
 @end
