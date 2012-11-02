@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE31A38E1643CEBA00602F88 /* FruitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31A38D1643CEBA00602F88 /* FruitViewController.m */; };
 		DE45A6E0163AA26D00A0B4D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE45A6DF163AA26D00A0B4D7 /* UIKit.framework */; };
 		DE45A6E2163AA26D00A0B4D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE45A6E1163AA26D00A0B4D7 /* Foundation.framework */; };
 		DE45A6E4163AA26D00A0B4D7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE45A6E3163AA26D00A0B4D7 /* CoreGraphics.framework */; };
@@ -17,7 +18,7 @@
 		DE45A6F4163AA26D00A0B4D7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE45A6F3163AA26D00A0B4D7 /* Default@2x.png */; };
 		DE45A6F6163AA26D00A0B4D7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE45A6F5163AA26D00A0B4D7 /* Default-568h@2x.png */; };
 		DE45A6F9163AA26D00A0B4D7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE45A6F7163AA26D00A0B4D7 /* MainStoryboard.storyboard */; };
-		DE45A704163AA75100A0B4D7 /* FruitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45A703163AA75100A0B4D7 /* FruitViewController.m */; };
+		DE45A704163AA75100A0B4D7 /* FruitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE45A703163AA75100A0B4D7 /* FruitTableViewController.m */; };
 		DE45A70A163AA89A00A0B4D7 /* watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE45A705163AA89A00A0B4D7 /* watermelon.png */; };
 		DE45A70B163AA89A00A0B4D7 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = DE45A706163AA89A00A0B4D7 /* orange.png */; };
 		DE45A70C163AA89A00A0B4D7 /* cherry.png in Resources */ = {isa = PBXBuildFile; fileRef = DE45A707163AA89A00A0B4D7 /* cherry.png */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE31A38C1643CEBA00602F88 /* FruitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FruitViewController.h; sourceTree = "<group>"; };
+		DE31A38D1643CEBA00602F88 /* FruitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FruitViewController.m; sourceTree = "<group>"; };
 		DE45A6DB163AA26D00A0B4D7 /* NavigationControllerTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationControllerTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE45A6DF163AA26D00A0B4D7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE45A6E1163AA26D00A0B4D7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,8 +43,8 @@
 		DE45A6F3163AA26D00A0B4D7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DE45A6F5163AA26D00A0B4D7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE45A6F8163AA26D00A0B4D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DE45A702163AA75100A0B4D7 /* FruitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FruitViewController.h; sourceTree = "<group>"; };
-		DE45A703163AA75100A0B4D7 /* FruitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FruitViewController.m; sourceTree = "<group>"; };
+		DE45A702163AA75100A0B4D7 /* FruitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FruitTableViewController.h; sourceTree = "<group>"; };
+		DE45A703163AA75100A0B4D7 /* FruitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FruitTableViewController.m; sourceTree = "<group>"; };
 		DE45A705163AA89A00A0B4D7 /* watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watermelon.png; sourceTree = "<group>"; };
 		DE45A706163AA89A00A0B4D7 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
 		DE45A707163AA89A00A0B4D7 /* cherry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cherry.png; sourceTree = "<group>"; };
@@ -96,8 +99,10 @@
 				DE45A6EE163AA26D00A0B4D7 /* AppDelegate.h */,
 				DE45A6EF163AA26D00A0B4D7 /* AppDelegate.m */,
 				DE45A6F7163AA26D00A0B4D7 /* MainStoryboard.storyboard */,
-				DE45A702163AA75100A0B4D7 /* FruitViewController.h */,
-				DE45A703163AA75100A0B4D7 /* FruitViewController.m */,
+				DE45A702163AA75100A0B4D7 /* FruitTableViewController.h */,
+				DE45A703163AA75100A0B4D7 /* FruitTableViewController.m */,
+				DE31A38C1643CEBA00602F88 /* FruitViewController.h */,
+				DE31A38D1643CEBA00602F88 /* FruitViewController.m */,
 				DE45A6E6163AA26D00A0B4D7 /* Supporting Files */,
 			);
 			path = NavigationControllerTableView;
@@ -195,7 +200,8 @@
 			files = (
 				DE45A6EC163AA26D00A0B4D7 /* main.m in Sources */,
 				DE45A6F0163AA26D00A0B4D7 /* AppDelegate.m in Sources */,
-				DE45A704163AA75100A0B4D7 /* FruitViewController.m in Sources */,
+				DE45A704163AA75100A0B4D7 /* FruitTableViewController.m in Sources */,
+				DE31A38E1643CEBA00602F88 /* FruitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +320,7 @@
 				DE45A701163AA26D00A0B4D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
