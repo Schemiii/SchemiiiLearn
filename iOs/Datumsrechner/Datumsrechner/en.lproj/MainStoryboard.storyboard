@@ -56,8 +56,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnPickDate:" destination="2" eventType="touchUpInside" id="hB2-Ix-Vsv"/>
-                                    <segue destination="zfA-UL-XAs" kind="modal" identifier="StartDate" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="cji-Jg-UZy"/>
+                                    <segue destination="pZN-FM-n50" kind="modal" identifier="StartDate" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="cji-Jg-UZy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKp-LG-B9T">
@@ -70,8 +69,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnPickDate:" destination="2" eventType="touchUpInside" id="Tll-3F-luL"/>
-                                    <segue destination="zfA-UL-XAs" kind="modal" identifier="EndDate" modalPresentationStyle="pageSheet" modalTransitionStyle="flipHorizontal" id="mAw-yt-67V"/>
+                                    <segue destination="pZN-FM-n50" kind="modal" identifier="EndDate" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="mAw-yt-67V"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-l6-FBF">
@@ -114,22 +112,102 @@
             </objects>
             <point key="canvasLocation" x="-659" y="-92"/>
         </scene>
-        <!--View Controller-->
+        <!--Date Picker View Controller-->
         <scene sceneID="0Q4-oi-DWM">
             <objects>
-                <viewController id="zfA-UL-XAs" sceneMemberID="viewController">
+                <viewController id="zfA-UL-XAs" customClass="DatePickerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="emq-PZ-t9n">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="540" height="556"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ona-tM-qpq">
+                                <date key="date" timeIntervalSinceReferenceDate="373972105.85692799">
+                                    <!--2012-11-07 09:08:25 +0000-->
+                                </date>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <mutableData key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</mutableData>
+                                </timeZone>
+                            </datePicker>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please select the start date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZH-M9-S8Z">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="BaK-iE-Sgq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ZH-M9-S8Z" firstAttribute="centerX" secondItem="ona-tM-qpq" secondAttribute="centerX" type="default" id="UPG-LS-ytW"/>
+                            <constraint firstItem="ona-tM-qpq" firstAttribute="leading" secondItem="emq-PZ-t9n" secondAttribute="leading" type="default" id="aEi-vw-K7B"/>
+                            <constraint firstItem="ona-tM-qpq" firstAttribute="top" secondItem="emq-PZ-t9n" secondAttribute="top" constant="236" id="nS7-R8-voh"/>
+                            <constraint firstItem="4ZH-M9-S8Z" firstAttribute="top" secondItem="emq-PZ-t9n" secondAttribute="top" constant="139" id="uIx-XJ-MiB"/>
+                            <constraint firstItem="ona-tM-qpq" firstAttribute="trailing" secondItem="emq-PZ-t9n" secondAttribute="trailing" type="default" id="xEW-aR-VXX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PI6-h6-YFg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TDa-wK-yIw">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="btnDidFinishDateSelection:" destination="zfA-UL-XAs" id="yJv-il-b9p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pkrDate" destination="ona-tM-qpq" id="gQ8-VV-kEm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PI-CI-1gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="-92"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H3N-US-wnY">
+            <objects>
+                <navigationController id="pZN-FM-n50" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="kJC-b7-f9G">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zfA-UL-XAs" kind="relationship" relationship="rootViewController" id="z2W-sA-rU6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KoZ-h4-jXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="402" y="-92"/>
         </scene>
     </scenes>
     <classes>
+        <class className="DatePickerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DatePickerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="btnDidFinishDateSelection:"/>
+                <relationship kind="outlet" name="pkrDate" candidateClass="UIDatePicker"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
@@ -137,7 +215,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="btnCalcDateDifference:"/>
-                <relationship kind="action" name="btnPickDate:"/>
                 <relationship kind="outlet" name="txtEndDate" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtStartDate" candidateClass="UITextField"/>
             </relationships>

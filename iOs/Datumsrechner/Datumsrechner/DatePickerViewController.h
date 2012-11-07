@@ -8,12 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DatePickerViewController : UIViewController
 
-@end
+@class DatePickerViewController;
 
 @protocol DatePickerDelegate <NSObject>
 
-- (NSDate*) DatePicker : ReturnDate;
+- (BOOL) datePicker : (DatePickerViewController*) picker willPickDate : (NSDate*) theDate;
+- (void) datePicker :(DatePickerViewController*) picker didPickDate : (NSDate*) theDate;
 
 @end
+
+@interface DatePickerViewController : UIViewController
+@property id<DatePickerDelegate> dateDelegate;
+- (IBAction)btnDidFinishDateSelection:(id)sender;
+@property (weak, nonatomic) IBOutlet UIDatePicker *pkrDate;
+
+//Probably should be read only
+@property(readwrite,nonatomic,strong) NSDate* minDate;
+@property(readwrite,nonatomic,strong) NSDate* maxDate;
+
+
+@end
+

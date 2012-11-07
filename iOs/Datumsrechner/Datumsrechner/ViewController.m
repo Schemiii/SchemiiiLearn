@@ -63,9 +63,6 @@
   
   
 }
--(void)btnPickDate:(id)sender{
-  
-}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
   [textField resignFirstResponder];
@@ -73,19 +70,47 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
+  
   if(textField == self.txtEndDate){
     
   }else if(textField==self.txtStartDate){
     
   }
 }
+- (void) datePicker :(DatePickerViewController*) picker didPickDate : (NSDate*) theDate{
+  NSLog(@"DatePicker returned %@",theDate);
+}
 
+- (BOOL) datePicker:(DatePickerViewController *)picker willPickDate:(NSDate *)theDate{
+  if(self->IsDatePickerStartDateActive){
+    return YES;
+  }
+  if(self->IsDatePickerEndDateActive){
+    if([self->model.startDate.date timeIntervalSinceDate:theDate]>0)
+      return YES;
+  }
+  return NO;
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+  DatePickerViewController *datepicker;
+  UINavigationController *navi;
   if([segue.identifier isEqualToString:@"StartDate"]){
-    
+    navi = [segue destinationViewController];
+    datepicker=(DatePickerViewController*) [navi presentedViewController];
+    datepicker.dateDelegate=self;
+    datepicker.minDate=self->model.startDate.date;
+    datepicker.maxDate=self->model.endDate.date;
+    self->IsDatePickerStartDateActive=YES;
+    self->IsDatePickerEndDateActive=NO;
   }else if([segue.identifier isEqualToString:@"EndDate"]){
-    
+    navi = [segue destinationViewController];
+    datepicker=(DatePickerViewController*) [navi presentedViewController];
+    datepicker.dateDelegate=self;
+    datepicker.minDate=self->model.startDate.date;
+    datepicker.maxDate=self->model.endDate.date;
+    self->IsDatePickerEndDateActive=YES;
+    self->IsDatePickerStartDateActive=NO;
   }
 }
 @end
