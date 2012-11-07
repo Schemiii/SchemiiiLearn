@@ -10,11 +10,29 @@
 
 @implementation Date
 
+@synthesize date;
+
+- (id)init{
+  self = [super init];
+  if(self){
+    format = [[NSDateFormatter alloc]init];
+    [format setDateFormat:@"dd.mm.yyyy"];
+  }
+  return self;
+}
+
 -(BOOL) dateFromNSString : (NSString*) inputString{
-  return YES;
+    self.date = [format dateFromString:inputString];
+  if(self.date==nil)
+    return NO;
+  else
+    return YES;
 }
 
 -(NSString*) description{
-  return @"foo";
+  if(date!=nil)
+   return [format stringFromDate:date];
+  else
+    return nil;
 }
 @end

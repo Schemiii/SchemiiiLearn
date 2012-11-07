@@ -19,6 +19,8 @@
 		DE31A3EF1643DF6100602F88 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE31A3ED1643DF6100602F88 /* MainStoryboard.storyboard */; };
 		DE31A3F21643DF6100602F88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31A3F11643DF6100602F88 /* ViewController.m */; };
 		DE31A3FD1643E33200602F88 /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = DE31A3FC1643E33200602F88 /* Date.m */; };
+		DEBE4675164A4A7000C087F7 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBE4674164A4A7000C087F7 /* Model.m */; };
+		DEBE467C164A592B00C087F7 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBE467B164A592B00C087F7 /* DatePickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +42,10 @@
 		DE31A3F11643DF6100602F88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DE31A3FB1643E33200602F88 /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
 		DE31A3FC1643E33200602F88 /* Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Date.m; sourceTree = "<group>"; };
-		DE31A3FE1643E34800602F88 /* DateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateModel.h; sourceTree = "<group>"; };
-		DE31A3FF1643E34800602F88 /* DateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateModel.m; sourceTree = "<group>"; };
+		DEBE4673164A4A7000C087F7 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		DEBE4674164A4A7000C087F7 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		DEBE467A164A592B00C087F7 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		DEBE467B164A592B00C087F7 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,14 +93,16 @@
 			isa = PBXGroup;
 			children = (
 				DE31A3E41643DF6100602F88 /* AppDelegate.h */,
-				DE31A3FE1643E34800602F88 /* DateModel.h */,
-				DE31A3FF1643E34800602F88 /* DateModel.m */,
+				DEBE4673164A4A7000C087F7 /* Model.h */,
+				DEBE4674164A4A7000C087F7 /* Model.m */,
 				DE31A3E51643DF6100602F88 /* AppDelegate.m */,
 				DE31A3ED1643DF6100602F88 /* MainStoryboard.storyboard */,
 				DE31A3FB1643E33200602F88 /* Date.h */,
 				DE31A3FC1643E33200602F88 /* Date.m */,
 				DE31A3F01643DF6100602F88 /* ViewController.h */,
 				DE31A3F11643DF6100602F88 /* ViewController.m */,
+				DEBE467A164A592B00C087F7 /* DatePickerViewController.h */,
+				DEBE467B164A592B00C087F7 /* DatePickerViewController.m */,
 				DE31A3DC1643DF6100602F88 /* Supporting Files */,
 			);
 			path = Datumsrechner;
@@ -186,6 +192,8 @@
 				DE31A3E61643DF6100602F88 /* AppDelegate.m in Sources */,
 				DE31A3F21643DF6100602F88 /* ViewController.m in Sources */,
 				DE31A3FD1643E33200602F88 /* Date.m in Sources */,
+				DEBE4675164A4A7000C087F7 /* Model.m in Sources */,
+				DEBE467C164A592B00C087F7 /* DatePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +312,7 @@
 				DE31A3F71643DF6100602F88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

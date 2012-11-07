@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Date : NSDateComponents
+@interface Date : NSObject{
+@private
+  NSDateFormatter* format;
+}
+
+@property(nonatomic,readwrite,strong) NSDate *date;
 
 -(BOOL) dateFromNSString : (NSString*) inputString;
 
-
+- (NSString *)description;
 
 @end

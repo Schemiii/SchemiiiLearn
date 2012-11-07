@@ -7,17 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController{
-  
+#import "Model.h"
+@interface ViewController : UIViewController <UITextFieldDelegate>{
+  @private
+  Model* model;
 }
 
-@property (weak, nonatomic) IBOutlet UITextView *txtStartDate;
-@property (weak, nonatomic) IBOutlet UITextView *txtEndDate;
+@property (weak, nonatomic) IBOutlet UITextField *txtStartDate;
+@property (weak, nonatomic) IBOutlet UITextField *txtEndDate;
 
 -(IBAction)btnCalcDateDifference :(id)sender;
 
 -(IBAction)btnPickDate:(id)sender;
-
 
 @end

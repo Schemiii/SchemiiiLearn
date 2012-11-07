@@ -10,9 +10,11 @@
 #import "Date.h"
 @interface DateModel : NSObject
 
-@property (nonatomic,assign) Date *startDate;
-@property (nonatomic,assign) Date *endDate;
+@property (nonatomic,readwrite,strong) Date *startDate;
+@property (nonatomic,readwrite,strong) Date *endDate;
 
-
+-(id) initWithNSDate:(NSDate*) startDate endDate:(NSDate*)endDate;
+-(id) initWithDate:(Date*) startDate endDate:(Date*) endDate;
+-(int) dayDifference;
 
 @end
