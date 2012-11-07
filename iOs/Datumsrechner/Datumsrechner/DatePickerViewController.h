@@ -19,13 +19,17 @@
 @end
 
 @interface DatePickerViewController : UIViewController
-@property id<DatePickerDelegate> dateDelegate;
-- (IBAction)btnDidFinishDateSelection:(id)sender;
-@property (weak, nonatomic) IBOutlet UIDatePicker *pkrDate;
 
-//Probably should be read only
-@property(readwrite,nonatomic,strong) NSDate* minDate;
-@property(readwrite,nonatomic,strong) NSDate* maxDate;
+@property (readwrite,nonatomic,strong) NSString* text;
+@property id<DatePickerDelegate> dateDelegate;
+
+@property (weak, nonatomic) IBOutlet UIDatePicker *pkrDate;
+@property (weak, nonatomic) IBOutlet UILabel *lblInfo;
+
+- (IBAction)btnDidFinishDateSelection:(id)sender;
+
+- (void) alertUserWithMessage : (NSString*) theMessage;
+
 
 
 @end

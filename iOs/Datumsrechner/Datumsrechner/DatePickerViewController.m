@@ -14,7 +14,6 @@
 
 @implementation DatePickerViewController
 
-@synthesize minDate,maxDate;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -22,16 +21,23 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+#ifdef CAVEMAN
       NSLog(@"I was initialized");
+#endif
     }
     return self;
 }
 
+- (void) setup{
+  //Setup the View
+  self.lblInfo.text=self.text;
+}
+
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
+  [self setup];
 	// Do any additional setup after loading the view.
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,10 +48,17 @@
 
 - (IBAction)btnDidFinishDateSelection:(id)sender {
   if([self.dateDelegate datePicker:self willPickDate:self.pkrDate.date]){
-    [self.dateDelegate datePicker:self didPickDate:self.pkrDate.date];
+    [self.navigationController dismissViewControllerAnimated:YES completion:^{
+      [self.dateDelegate datePicker:self didPickDate:self.pkrDate.date];
+    }];
   }else{
     [self shakeView:self.view];
   }
+}
+
+- (void)alertUserWithMessage:(NSString *)theMessage{
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wrong Input" message:theMessage delegate:self cancelButtonTitle:@"Sorry, my Bad" otherButtonTitles:nil, nil];
+  [alert show];
 }
 
 - (void)shakeView:(UIView *)viewToShake

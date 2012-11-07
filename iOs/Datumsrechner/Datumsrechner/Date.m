@@ -10,17 +10,23 @@
 
 @implementation Date
 
-@synthesize date;
+@synthesize date=_date;
 
 - (id)init{
   self = [super init];
   if(self){
     format = [[NSDateFormatter alloc]init];
-    [format setDateFormat:@"dd.mm.yyyy"];
+    [format setDateFormat:@"dd.MM.yyyy"];
   }
   return self;
 }
-
+- (void)setDate:(NSDate *)date{
+  //Convert to absolute days
+  NSString *tmp;
+  tmp=[format stringFromDate:date];
+  self->_date=[format dateFromString:tmp];
+  self->_date=date;
+}
 -(BOOL) dateFromNSString : (NSString*) inputString{
     self.date = [format dateFromString:inputString];
   if(self.date==nil)
@@ -30,8 +36,8 @@
 }
 
 -(NSString*) description{
-  if(date!=nil)
-   return [format stringFromDate:date];
+  if(_date!=nil)
+   return [format stringFromDate:_date];
   else
     return nil;
 }

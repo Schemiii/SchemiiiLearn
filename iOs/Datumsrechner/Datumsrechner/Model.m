@@ -21,6 +21,10 @@
   
 }
 -(int) dayDifference{
-  return [endDate.date timeIntervalSinceDate:startDate.date];
+ return ([endDate.date timeIntervalSinceDate:startDate.date]/60/60/24);
+}
+
+-(NSString*) description{
+  return [NSString stringWithFormat:@"StartDate : %@ , EndDate : %@",startDate,endDate];
 }
 @end

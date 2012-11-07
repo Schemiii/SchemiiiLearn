@@ -72,38 +72,47 @@
                                     <segue destination="pZN-FM-n50" kind="modal" identifier="EndDate" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="mAw-yt-67V"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-l6-FBF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-l6-FBF">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="112" id="TBi-3a-mCS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fmj-ar-FFb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fmj-ar-FFb">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0o-Ly-hib">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fmj-ar-FFb" firstAttribute="bottom" secondItem="MsB-uL-MNR" secondAttribute="bottom" type="default" id="1JF-7H-DgQ"/>
+                            <constraint firstItem="S0o-Ly-hib" firstAttribute="leading" secondItem="fmj-ar-FFb" secondAttribute="leading" type="default" id="31K-Li-ZZW"/>
                             <constraint firstItem="MsB-uL-MNR" firstAttribute="leading" secondItem="jy5-m6-byh" secondAttribute="leading" type="default" id="3rC-Kh-lkr"/>
                             <constraint firstItem="fmj-ar-FFb" firstAttribute="top" secondItem="5" secondAttribute="top" constant="259" id="9W4-xA-JaS"/>
                             <constraint firstItem="Jnh-l6-FBF" firstAttribute="baseline" secondItem="jy5-m6-byh" secondAttribute="baseline" type="default" id="DuC-Nb-ZwE"/>
                             <constraint firstItem="JKp-LG-B9T" firstAttribute="top" secondItem="5" secondAttribute="top" constant="262" id="K6O-xf-8by"/>
                             <constraint firstAttribute="trailing" secondItem="b0t-Iz-Vxd" secondAttribute="trailing" constant="252" id="Lfk-sN-KVb"/>
                             <constraint firstItem="fmj-ar-FFb" firstAttribute="trailing" secondItem="jee-8G-kIE" secondAttribute="trailing" type="default" id="MQ4-Qg-iP0"/>
-                            <constraint firstItem="Jnh-l6-FBF" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="361" id="OWc-LT-9JC"/>
                             <constraint firstItem="fmj-ar-FFb" firstAttribute="trailing" secondItem="Jnh-l6-FBF" secondAttribute="trailing" type="default" id="VMy-N9-dM6"/>
+                            <constraint firstItem="jee-8G-kIE" firstAttribute="trailing" secondItem="S0o-Ly-hib" secondAttribute="trailing" type="default" id="YB8-K1-Vpt"/>
+                            <constraint firstItem="Jnh-l6-FBF" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="361" id="c6Z-1o-Zji"/>
                             <constraint firstItem="b0t-Iz-Vxd" firstAttribute="top" secondItem="5" secondAttribute="top" constant="218" id="cIw-En-hRI"/>
                             <constraint firstItem="jy5-m6-byh" firstAttribute="top" secondItem="5" secondAttribute="top" constant="213" id="oeK-XS-J0O"/>
                             <constraint firstItem="JKp-LG-B9T" firstAttribute="leading" secondItem="b0t-Iz-Vxd" secondAttribute="leading" type="default" id="sS6-sU-FaD"/>
                             <constraint firstItem="jy5-m6-byh" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="244" id="veP-3H-eZh"/>
                             <constraint firstItem="jee-8G-kIE" firstAttribute="top" secondItem="5" secondAttribute="top" constant="338" id="vhk-a0-wWf"/>
                             <constraint firstItem="fmj-ar-FFb" firstAttribute="leading" secondItem="Jnh-l6-FBF" secondAttribute="leading" type="default" id="xDU-wi-4Z0"/>
+                            <constraint firstItem="S0o-Ly-hib" firstAttribute="top" secondItem="5" secondAttribute="top" constant="419" id="z7K-Ex-5nR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblDifference" destination="S0o-Ly-hib" id="f4f-e7-Ssx"/>
                         <outlet property="txtEndDate" destination="fmj-ar-FFb" id="nnj-xQ-Mcv"/>
                         <outlet property="txtStartDate" destination="Jnh-l6-FBF" id="dJn-h5-qCA"/>
                     </connections>
@@ -120,7 +129,7 @@
                         <rect key="frame" x="0.0" y="64" width="540" height="556"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ona-tM-qpq">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ona-tM-qpq">
                                 <date key="date" timeIntervalSinceReferenceDate="373972105.85692799">
                                     <!--2012-11-07 09:08:25 +0000-->
                                 </date>
@@ -146,7 +155,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </mutableData>
                                 </timeZone>
                             </datePicker>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please select the start date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZH-M9-S8Z">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Please select the start date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZH-M9-S8Z">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="235" id="BaK-iE-Sgq"/>
                                 </constraints>
@@ -173,6 +182,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="lblInfo" destination="4ZH-M9-S8Z" id="Ryz-Kf-GML"/>
                         <outlet property="pkrDate" destination="ona-tM-qpq" id="gQ8-VV-kEm"/>
                     </connections>
                 </viewController>
@@ -205,6 +215,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DatePickerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="btnDidFinishDateSelection:"/>
+                <relationship kind="outlet" name="lblInfo" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="pkrDate" candidateClass="UIDatePicker"/>
             </relationships>
         </class>
@@ -215,6 +226,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="btnCalcDateDifference:"/>
+                <relationship kind="outlet" name="lblDifference" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="txtEndDate" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="txtStartDate" candidateClass="UITextField"/>
             </relationships>

@@ -13,7 +13,7 @@
   NSDateFormatter* format;
 }
 
-@property(nonatomic,readwrite,strong) NSDate *date;
+@property(nonatomic,readwrite,strong) NSDate* date;
 
 -(BOOL) dateFromNSString : (NSString*) inputString;
 
