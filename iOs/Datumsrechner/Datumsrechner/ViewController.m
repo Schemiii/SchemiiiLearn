@@ -128,11 +128,14 @@
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
   if(viewController){
     if([viewController respondsToSelector:@selector(setDateDelegate:)]){
-      [viewController performSelector:@selector(setDateDelegate:)withObject:self];
-      if(IsDatePickerEndDateActive)
+      [viewController performSelector:@selector(setDateDelegate:)withObject:self];     
+      if(IsDatePickerEndDateActive){
         [viewController performSelector:@selector(setText:) withObject:@"Please Enter the End Date"];
+         [viewController performSelector:@selector(setDatePickerToDate:) withObject:self->model.endDate.date];
+      }
       if(IsDatePickerStartDateActive){
         [viewController performSelector:@selector(setText:) withObject:@"Please enter the Start Date"];
+        [viewController performSelector:@selector(setDatePickerToDate:) withObject:self->model.startDate.date];
       }
     }
   }

@@ -30,6 +30,7 @@
 
 - (void) alertUserWithMessage : (NSString*) theMessage;
 
+- (void) setDatePickerToDate : (NSDate*) theDate;
 
 
 @end

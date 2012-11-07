@@ -56,6 +56,10 @@
   }
 }
 
+- (void) setDatePickerToDate : (NSDate*) theDate{
+  self.pkrDate.date=theDate;
+}
+
 - (void)alertUserWithMessage:(NSString *)theMessage{
   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wrong Input" message:theMessage delegate:self cancelButtonTitle:@"Sorry, my Bad" otherButtonTitles:nil, nil];
   [alert show];
