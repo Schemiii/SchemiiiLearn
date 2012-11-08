@@ -310,6 +310,7 @@
 				DE28EC24164BD1D70091E023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
