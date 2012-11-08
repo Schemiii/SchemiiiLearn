@@ -16,11 +16,17 @@
 
 @implementation ViewController
 
+- (IBAction)btnAnimate:(id)sender {
+}
+
 - (void)btnConvertBin:(id)sender{
    self.lblOutput.text = [[[BinConverter alloc] initWithInt:[self.txtInput.text intValue]] convert];
 }
 - (void)btnConvertHex:(id)sender{
   self.lblOutput.text = [[[HexConverter alloc] initWithInt:[self.txtInput.text intValue]] convert];
+}
+
+- (IBAction)btnAnimate:(id)sender {
 }
 
 - (void)viewDidLoad

@@ -52,11 +52,11 @@
   CGContextBeginPath(context);
   //Move to center of the circle
   CGContextAddArc(context, self.triangleCenter.x, self.triangleCenter.y+85, 18, 0, 2*M_PI, YES);
-  CGContextSetFillColorWithColor(context, [[UIColor redColor]CGColor]);
+  CGContextSetFillColorWithColor(context, [[UIColor blueColor]CGColor]);
   CGContextDrawPath(context, kCGPathFill);
   CGContextBeginPath(context);
   CGContextSetLineWidth(context, 40.0);
-  CGContextSetStrokeColorWithColor(context, [[UIColor redColor] CGColor]);
+  CGContextSetStrokeColorWithColor(context, [[UIColor blueColor] CGColor]);
   CGContextMoveToPoint(context, self.triangleCenter.x, self.triangleCenter.y-60);
   CGContextAddLineToPoint(context, self.triangleCenter.x, self.triangleCenter.y+35);
   CGContextDrawPath(context, kCGPathStroke);

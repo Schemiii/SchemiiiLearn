@@ -14,6 +14,9 @@
 
 @implementation ViewController
 
+- (IBAction)btnAnimate:(id)sender {
+}
+
 - (void)btnCopy:(id)sender{
   [self.lblText setText:[self.txtText text]];
   NSLog(@"Copy Text : \"%@\" to Label",[self.txtText text]);

@@ -37,4 +37,6 @@
   
 }
 
+- (IBAction)btnAnimate:(id)sender {
+}
 @end

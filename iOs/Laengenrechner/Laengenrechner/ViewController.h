@@ -10,6 +10,7 @@
 #import "LengthCalculator.h"
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *txtInput;
+- (IBAction)btnAnimate:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *lblMeters;
 @property (weak, nonatomic) IBOutlet UILabel *lblZentimeters;
 @property (weak, nonatomic) IBOutlet UILabel *lblZoll;

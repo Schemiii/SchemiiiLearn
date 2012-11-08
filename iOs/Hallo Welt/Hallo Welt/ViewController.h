@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)btnAnimate:(id)sender;
 - (IBAction)btnCopy:(id)sender;
 - (IBAction)btnConvert:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *txtText;
