@@ -60,6 +60,7 @@
   self.pkrDate.date=theDate;
 }
 
+
 - (void)alertUserWithMessage:(NSString *)theMessage{
   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wrong Input" message:theMessage delegate:self cancelButtonTitle:@"Sorry, my Bad" otherButtonTitles:nil, nil];
   [alert show];
@@ -81,6 +82,21 @@
       } completion:NULL];
     }
   }];
+}
+
+- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item{
+  NSLog(@"NavigationBarItem %@ was popped from the stack",item.description);
+}
+- (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item{
+  NSLog(@"NavigationBarItem %@ was pushed onto the stack",item.description);
+}
+- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item{
+  NSLog(@"NavigationBarItem %@ should be popped",item);
+  return YES;
+}
+- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item{
+  NSLog(@"NavigationBarItem %@ should be pushed",item);
+  return YES;
 }
 
 @end

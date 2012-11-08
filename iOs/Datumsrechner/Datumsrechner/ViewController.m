@@ -80,6 +80,7 @@
   self.lblDifference.text=[[NSNumber numberWithInt:self->model.dayDifference]stringValue];
 }
 
+
 //I dont like the approach to edit the text field, so i won't implement this stuff
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
   [textField resignFirstResponder];
@@ -140,20 +141,7 @@
     }
   }
 }
-- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item{
-  NSLog(@"NavigationBarItem %@ was popped from the stack",item.description);
-}
-- (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item{
-  NSLog(@"NavigationBarItem %@ was pushed onto the stack",item.description);
-}
-- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item{
-  NSLog(@"NavigationBarItem %@ should be popped",item);
-  return YES;
-}
-- (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item{
-  NSLog(@"NavigationBarItem %@ should be pushed",item);
-  return YES;
-}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
   DatePickerViewController *datepicker;

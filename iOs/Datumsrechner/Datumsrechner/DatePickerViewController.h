@@ -18,7 +18,7 @@
 
 @end
 
-@interface DatePickerViewController : UIViewController
+@interface DatePickerViewController : UIViewController<UINavigationBarDelegate>
 
 @property (readwrite,nonatomic,strong) NSString* text;
 @property id<DatePickerDelegate> dateDelegate;
@@ -32,6 +32,7 @@
 
 - (void) setDatePickerToDate : (NSDate*) theDate;
 
+- (IBAction)btnFoo:(id)sender;
 
 @end
 

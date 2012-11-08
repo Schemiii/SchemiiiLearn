@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DatePickerViewController.h"
 #import "Model.h"
-@interface ViewController : UIViewController <UITextFieldDelegate,UINavigationControllerDelegate,DatePickerDelegate, UINavigationBarDelegate>{
+@interface ViewController : UIViewController <UITextFieldDelegate,UINavigationControllerDelegate,DatePickerDelegate>{
   @private
   Model* model;
   BOOL IsDatePickerStartDateActive;
@@ -21,5 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblDifference;
 
 -(IBAction)btnCalcDateDifference :(id)sender;
+- (IBAction)btnTest:(id)sender;
 
 @end
