@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TriangleView.h"
+@interface ViewController : UIViewController{
+}
+@property (strong, nonatomic) IBOutlet TriangleView *triangleView;
 
-@interface ViewController : UIViewController
 
 @end

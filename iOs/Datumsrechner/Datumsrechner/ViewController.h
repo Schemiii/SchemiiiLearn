@@ -21,6 +21,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblDifference;
 
 -(IBAction)btnCalcDateDifference :(id)sender;
-- (IBAction)btnTest:(id)sender;
 
 @end

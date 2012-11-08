@@ -18,6 +18,7 @@
 		DE28EBAB164BB65D0091E023 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE28EBAA164BB65D0091E023 /* Default-568h@2x.png */; };
 		DE28EBAE164BB65D0091E023 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE28EBAC164BB65D0091E023 /* MainStoryboard.storyboard */; };
 		DE28EBB1164BB65D0091E023 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE28EBB0164BB65D0091E023 /* ViewController.m */; };
+		DE28EBB9164BB67D0091E023 /* TriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE28EBB8164BB67D0091E023 /* TriangleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		DE28EBAD164BB65D0091E023 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DE28EBAF164BB65D0091E023 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DE28EBB0164BB65D0091E023 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DE28EBB7164BB67D0091E023 /* TriangleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TriangleView.h; sourceTree = "<group>"; };
+		DE28EBB8164BB67D0091E023 /* TriangleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TriangleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				DE28EBA3164BB65D0091E023 /* AppDelegate.h */,
 				DE28EBA4164BB65D0091E023 /* AppDelegate.m */,
 				DE28EBAC164BB65D0091E023 /* MainStoryboard.storyboard */,
+				DE28EBB7164BB67D0091E023 /* TriangleView.h */,
+				DE28EBB8164BB67D0091E023 /* TriangleView.m */,
 				DE28EBAF164BB65D0091E023 /* ViewController.h */,
 				DE28EBB0164BB65D0091E023 /* ViewController.m */,
 				DE28EB9B164BB65D0091E023 /* Supporting Files */,
@@ -176,6 +181,7 @@
 				DE28EBA1164BB65D0091E023 /* main.m in Sources */,
 				DE28EBA5164BB65D0091E023 /* AppDelegate.m in Sources */,
 				DE28EBB1164BB65D0091E023 /* ViewController.m in Sources */,
+				DE28EBB9164BB67D0091E023 /* TriangleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
