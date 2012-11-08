@@ -68,6 +68,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pZN-FM-n50" kind="modal" identifier="EndDate" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="6LN-OB-BVi"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnh-l6-FBF">
                                 <constraints>
@@ -112,12 +115,11 @@
                         <outlet property="lblDifference" destination="S0o-Ly-hib" id="f4f-e7-Ssx"/>
                         <outlet property="txtEndDate" destination="fmj-ar-FFb" id="nnj-xQ-Mcv"/>
                         <outlet property="txtStartDate" destination="Jnh-l6-FBF" id="dJn-h5-qCA"/>
-                        <segue destination="pZN-FM-n50" kind="modal" id="bjH-dy-JJD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-659" y="-92"/>
+            <point key="canvasLocation" x="-663" y="-294"/>
         </scene>
         <!--Date Picker View Controller-->
         <scene sceneID="0Q4-oi-DWM">
@@ -186,7 +188,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PI-CI-1gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="-628"/>
+            <point key="canvasLocation" x="1138" y="-92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H3N-US-wnY">
@@ -236,6 +238,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="cji-Jg-UZy"/>
+        <segue reference="6LN-OB-BVi"/>
     </inferredMetricsTieBreakers>
 </document>

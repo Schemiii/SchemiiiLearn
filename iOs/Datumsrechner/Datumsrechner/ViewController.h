@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DatePickerViewController.h"
 #import "Model.h"
-@interface ViewController : UIViewController <UITextFieldDelegate,UINavigationControllerDelegate,DatePickerDelegate>{
+@interface ViewController : UIViewController <UITextFieldDelegate,UINavigationControllerDelegate,DatePickerDelegate, UINavigationBarDelegate>{
   @private
   Model* model;
   BOOL IsDatePickerStartDateActive;
