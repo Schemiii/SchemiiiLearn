@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE28EB67164BACB10091E023 /* UITestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE28EB66164BACB10091E023 /* UITestViewController.m */; };
 		DE31A3D61643DF6100602F88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE31A3D51643DF6100602F88 /* UIKit.framework */; };
 		DE31A3D81643DF6100602F88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE31A3D71643DF6100602F88 /* Foundation.framework */; };
 		DE31A3DA1643DF6100602F88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE31A3D91643DF6100602F88 /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE28EB65164BACB10091E023 /* UITestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITestViewController.h; sourceTree = "<group>"; };
+		DE28EB66164BACB10091E023 /* UITestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITestViewController.m; sourceTree = "<group>"; };
 		DE31A3D11643DF6100602F88 /* Datumsrechner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Datumsrechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE31A3D51643DF6100602F88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE31A3D71643DF6100602F88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +100,8 @@
 				DEBE4674164A4A7000C087F7 /* Model.m */,
 				DE31A3E51643DF6100602F88 /* AppDelegate.m */,
 				DE31A3ED1643DF6100602F88 /* MainStoryboard.storyboard */,
+				DE28EB65164BACB10091E023 /* UITestViewController.h */,
+				DE28EB66164BACB10091E023 /* UITestViewController.m */,
 				DE31A3FB1643E33200602F88 /* Date.h */,
 				DE31A3FC1643E33200602F88 /* Date.m */,
 				DE31A3F01643DF6100602F88 /* ViewController.h */,
@@ -194,6 +199,7 @@
 				DE31A3FD1643E33200602F88 /* Date.m in Sources */,
 				DEBE4675164A4A7000C087F7 /* Model.m in Sources */,
 				DEBE467C164A592B00C087F7 /* DatePickerViewController.m in Sources */,
+				DE28EB67164BACB10091E023 /* UITestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

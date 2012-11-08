@@ -32,7 +32,6 @@
 
 - (void) setDatePickerToDate : (NSDate*) theDate;
 
-- (IBAction)btnFoo:(id)sender;
 
 @end
 

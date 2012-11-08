@@ -31,6 +31,7 @@
 - (void) setup{
   //Setup the View
   self.lblInfo.text=self.text;
+
 }
 
 - (void)viewDidLoad
@@ -83,6 +84,7 @@
     }
   }];
 }
+
 
 - (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item{
   NSLog(@"NavigationBarItem %@ was popped from the stack",item.description);
