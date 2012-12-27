@@ -10,5 +10,6 @@
 
 @interface ViewController : UIViewController<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *apple;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollApple;
 
 @end

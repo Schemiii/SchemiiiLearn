@@ -18,18 +18,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  self.scrollApple.contentSize=CGSizeMake(1280, 1024);
+  self.scrollApple.delegate=self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+  
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
   return self.apple;
 }
-
 
 - (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view{
   NSLog(@"Scroll View Begin Zoom");
