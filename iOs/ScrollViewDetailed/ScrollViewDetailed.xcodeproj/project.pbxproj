@@ -19,10 +19,6 @@
 		DE12D4E0168C64DA00D5A5A8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12D4DE168C64DA00D5A5A8 /* MainStoryboard_iPhone.storyboard */; };
 		DE12D4E3168C64DA00D5A5A8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12D4E1168C64DA00D5A5A8 /* MainStoryboard_iPad.storyboard */; };
 		DE12D4E6168C64DA00D5A5A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE12D4E5168C64DA00D5A5A8 /* ViewController.m */; };
-		DE12D4F0168C68AC00D5A5A8 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = DE12D4EC168C68AC00D5A5A8 /* apple.png */; };
-		DE12D4F1168C68AC00D5A5A8 /* cherry.png in Resources */ = {isa = PBXBuildFile; fileRef = DE12D4ED168C68AC00D5A5A8 /* cherry.png */; };
-		DE12D4F2168C68AC00D5A5A8 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = DE12D4EE168C68AC00D5A5A8 /* orange.png */; };
-		DE12D4F3168C68AC00D5A5A8 /* watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE12D4EF168C68AC00D5A5A8 /* watermelon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,10 +39,6 @@
 		DE12D4E2168C64DA00D5A5A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		DE12D4E4168C64DA00D5A5A8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DE12D4E5168C64DA00D5A5A8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DE12D4EC168C68AC00D5A5A8 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apple.png; path = ../apple.png; sourceTree = "<group>"; };
-		DE12D4ED168C68AC00D5A5A8 /* cherry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cherry.png; path = ../cherry.png; sourceTree = "<group>"; };
-		DE12D4EE168C68AC00D5A5A8 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = orange.png; path = ../orange.png; sourceTree = "<group>"; };
-		DE12D4EF168C68AC00D5A5A8 /* watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = watermelon.png; path = ../watermelon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +85,6 @@
 		DE12D4CC168C64DA00D5A5A8 /* ScrollViewDetailed */ = {
 			isa = PBXGroup;
 			children = (
-				DE12D4EC168C68AC00D5A5A8 /* apple.png */,
-				DE12D4ED168C68AC00D5A5A8 /* cherry.png */,
-				DE12D4EE168C68AC00D5A5A8 /* orange.png */,
-				DE12D4EF168C68AC00D5A5A8 /* watermelon.png */,
 				DE12D4D5168C64DA00D5A5A8 /* AppDelegate.h */,
 				DE12D4D6168C64DA00D5A5A8 /* AppDelegate.m */,
 				DE12D4DE168C64DA00D5A5A8 /* MainStoryboard_iPhone.storyboard */,
@@ -179,10 +167,6 @@
 				DE12D4DD168C64DA00D5A5A8 /* Default-568h@2x.png in Resources */,
 				DE12D4E0168C64DA00D5A5A8 /* MainStoryboard_iPhone.storyboard in Resources */,
 				DE12D4E3168C64DA00D5A5A8 /* MainStoryboard_iPad.storyboard in Resources */,
-				DE12D4F0168C68AC00D5A5A8 /* apple.png in Resources */,
-				DE12D4F1168C68AC00D5A5A8 /* cherry.png in Resources */,
-				DE12D4F2168C68AC00D5A5A8 /* orange.png in Resources */,
-				DE12D4F3168C68AC00D5A5A8 /* watermelon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

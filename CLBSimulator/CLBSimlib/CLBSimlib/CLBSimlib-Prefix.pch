@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'CLBSimlib' target in the 'CLBSimlib' project
-//
-
-#ifdef __OBJC__
-  #import <Foundation/Foundation.h>
-#endif

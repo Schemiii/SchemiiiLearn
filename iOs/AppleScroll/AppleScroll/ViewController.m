@@ -33,5 +33,16 @@
   return self.apple;
 }
 
-
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view{
+  NSLog(@"Scroll View Begin Zoom");
+  }
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView{
+  NSLog(@"Scroll View Did Zoom");
+}
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView{
+  NSLog(@"Scrollview did scroll");
+}
+- (void) scrollViewDidScrollToTop:(UIScrollView *)scrollView{
+  NSLog(@"Scrollview didscrolltotop");
+}
 @end
