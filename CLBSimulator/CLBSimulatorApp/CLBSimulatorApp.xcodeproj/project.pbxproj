@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE12D61A168C73D900D5A5A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D619168C73D900D5A5A8 /* UIKit.framework */; };
+		DE12D61C168C73D900D5A5A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D61B168C73D900D5A5A8 /* Foundation.framework */; };
+		DE12D61E168C73D900D5A5A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D61D168C73D900D5A5A8 /* CoreGraphics.framework */; };
+		DE12D624168C73D900D5A5A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE12D622168C73D900D5A5A8 /* InfoPlist.strings */; };
+		DE12D626168C73D900D5A5A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE12D625168C73D900D5A5A8 /* main.m */; };
+		DE12D62A168C73D900D5A5A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE12D629168C73D900D5A5A8 /* AppDelegate.m */; };
+		DE12D62C168C73D900D5A5A8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE12D62B168C73D900D5A5A8 /* Default.png */; };
+		DE12D62E168C73D900D5A5A8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE12D62D168C73D900D5A5A8 /* Default@2x.png */; };
+		DE12D630168C73D900D5A5A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE12D62F168C73D900D5A5A8 /* Default-568h@2x.png */; };
+		DE12D633168C73D900D5A5A8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE12D631168C73D900D5A5A8 /* MainStoryboard.storyboard */; };
+		DE12D636168C73D900D5A5A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE12D635168C73D900D5A5A8 /* ViewController.m */; };
+		DE12D63E168C73D900D5A5A8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D63D168C73D900D5A5A8 /* SenTestingKit.framework */; };
+		DE12D63F168C73D900D5A5A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D619168C73D900D5A5A8 /* UIKit.framework */; };
+		DE12D640168C73D900D5A5A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D61B168C73D900D5A5A8 /* Foundation.framework */; };
+		DE12D648168C73D900D5A5A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE12D646168C73D900D5A5A8 /* InfoPlist.strings */; };
+		DE12D64B168C73D900D5A5A8 /* CLBSimulatorAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE12D64A168C73D900D5A5A8 /* CLBSimulatorAppTests.m */; };
+		DE12D658168C74E300D5A5A8 /* libCLBSimlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D657168C74E300D5A5A8 /* libCLBSimlib.a */; };
+		DE12D659168C74E300D5A5A8 /* libCLBSimlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D657168C74E300D5A5A8 /* libCLBSimlib.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE12D641168C73D900D5A5A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE12D60C168C73D900D5A5A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE12D614168C73D900D5A5A8;
+			remoteInfo = CLBSimulatorApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE12D615168C73D900D5A5A8 /* CLBSimulatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLBSimulatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE12D619168C73D900D5A5A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DE12D61B168C73D900D5A5A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DE12D61D168C73D900D5A5A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DE12D621168C73D900D5A5A8 /* CLBSimulatorApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLBSimulatorApp-Info.plist"; sourceTree = "<group>"; };
+		DE12D623168C73D900D5A5A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DE12D625168C73D900D5A5A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DE12D627168C73D900D5A5A8 /* CLBSimulatorApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLBSimulatorApp-Prefix.pch"; sourceTree = "<group>"; };
+		DE12D628168C73D900D5A5A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DE12D629168C73D900D5A5A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DE12D62B168C73D900D5A5A8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DE12D62D168C73D900D5A5A8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DE12D62F168C73D900D5A5A8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DE12D632168C73D900D5A5A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DE12D634168C73D900D5A5A8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DE12D635168C73D900D5A5A8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DE12D63C168C73D900D5A5A8 /* CLBSimulatorAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLBSimulatorAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE12D63D168C73D900D5A5A8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DE12D645168C73D900D5A5A8 /* CLBSimulatorAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CLBSimulatorAppTests-Info.plist"; sourceTree = "<group>"; };
+		DE12D647168C73D900D5A5A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DE12D649168C73D900D5A5A8 /* CLBSimulatorAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBSimulatorAppTests.h; sourceTree = "<group>"; };
+		DE12D64A168C73D900D5A5A8 /* CLBSimulatorAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBSimulatorAppTests.m; sourceTree = "<group>"; };
+		DE12D656168C74D400D5A5A8 /* CLBSimlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLBSimlib.h; path = ../../CLBSimlib/CLBSimlib/CLBSimlib.h; sourceTree = "<group>"; };
+		DE12D657168C74E300D5A5A8 /* libCLBSimlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCLBSimlib.a; path = "../../../../../Library/Developer/Xcode/DerivedData/CLBSimulator-fmfqgyczkxzymbdoeverqyxoxzvw/Build/Products/Debug-iphoneos/libCLBSimlib.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE12D612168C73D900D5A5A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE12D61A168C73D900D5A5A8 /* UIKit.framework in Frameworks */,
+				DE12D61C168C73D900D5A5A8 /* Foundation.framework in Frameworks */,
+				DE12D61E168C73D900D5A5A8 /* CoreGraphics.framework in Frameworks */,
+				DE12D658168C74E300D5A5A8 /* libCLBSimlib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12D638168C73D900D5A5A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE12D63E168C73D900D5A5A8 /* SenTestingKit.framework in Frameworks */,
+				DE12D63F168C73D900D5A5A8 /* UIKit.framework in Frameworks */,
+				DE12D640168C73D900D5A5A8 /* Foundation.framework in Frameworks */,
+				DE12D659168C74E300D5A5A8 /* libCLBSimlib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE12D60A168C73D900D5A5A8 = {
+			isa = PBXGroup;
+			children = (
+				DE12D61F168C73D900D5A5A8 /* CLBSimulatorApp */,
+				DE12D643168C73D900D5A5A8 /* CLBSimulatorAppTests */,
+				DE12D618168C73D900D5A5A8 /* Frameworks */,
+				DE12D616168C73D900D5A5A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE12D616168C73D900D5A5A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE12D615168C73D900D5A5A8 /* CLBSimulatorApp.app */,
+				DE12D63C168C73D900D5A5A8 /* CLBSimulatorAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE12D618168C73D900D5A5A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE12D619168C73D900D5A5A8 /* UIKit.framework */,
+				DE12D61B168C73D900D5A5A8 /* Foundation.framework */,
+				DE12D61D168C73D900D5A5A8 /* CoreGraphics.framework */,
+				DE12D63D168C73D900D5A5A8 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE12D61F168C73D900D5A5A8 /* CLBSimulatorApp */ = {
+			isa = PBXGroup;
+			children = (
+				DE12D65A168C74E800D5A5A8 /* Classes */,
+				DE12D628168C73D900D5A5A8 /* AppDelegate.h */,
+				DE12D629168C73D900D5A5A8 /* AppDelegate.m */,
+				DE12D631168C73D900D5A5A8 /* MainStoryboard.storyboard */,
+				DE12D634168C73D900D5A5A8 /* ViewController.h */,
+				DE12D635168C73D900D5A5A8 /* ViewController.m */,
+				DE12D620168C73D900D5A5A8 /* Supporting Files */,
+			);
+			path = CLBSimulatorApp;
+			sourceTree = "<group>";
+		};
+		DE12D620168C73D900D5A5A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE12D621168C73D900D5A5A8 /* CLBSimulatorApp-Info.plist */,
+				DE12D622168C73D900D5A5A8 /* InfoPlist.strings */,
+				DE12D625168C73D900D5A5A8 /* main.m */,
+				DE12D627168C73D900D5A5A8 /* CLBSimulatorApp-Prefix.pch */,
+				DE12D62B168C73D900D5A5A8 /* Default.png */,
+				DE12D62D168C73D900D5A5A8 /* Default@2x.png */,
+				DE12D62F168C73D900D5A5A8 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE12D643168C73D900D5A5A8 /* CLBSimulatorAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE12D649168C73D900D5A5A8 /* CLBSimulatorAppTests.h */,
+				DE12D64A168C73D900D5A5A8 /* CLBSimulatorAppTests.m */,
+				DE12D644168C73D900D5A5A8 /* Supporting Files */,
+			);
+			path = CLBSimulatorAppTests;
+			sourceTree = "<group>";
+		};
+		DE12D644168C73D900D5A5A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE12D645168C73D900D5A5A8 /* CLBSimulatorAppTests-Info.plist */,
+				DE12D646168C73D900D5A5A8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE12D65A168C74E800D5A5A8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DE12D65B168C74ED00D5A5A8 /* CLBLibrary */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DE12D65B168C74ED00D5A5A8 /* CLBLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				DE12D657168C74E300D5A5A8 /* libCLBSimlib.a */,
+				DE12D656168C74D400D5A5A8 /* CLBSimlib.h */,
+			);
+			name = CLBLibrary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE12D614168C73D900D5A5A8 /* CLBSimulatorApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE12D64E168C73D900D5A5A8 /* Build configuration list for PBXNativeTarget "CLBSimulatorApp" */;
+			buildPhases = (
+				DE12D611168C73D900D5A5A8 /* Sources */,
+				DE12D612168C73D900D5A5A8 /* Frameworks */,
+				DE12D613168C73D900D5A5A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CLBSimulatorApp;
+			productName = CLBSimulatorApp;
+			productReference = DE12D615168C73D900D5A5A8 /* CLBSimulatorApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE12D63B168C73D900D5A5A8 /* CLBSimulatorAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE12D651168C73D900D5A5A8 /* Build configuration list for PBXNativeTarget "CLBSimulatorAppTests" */;
+			buildPhases = (
+				DE12D637168C73D900D5A5A8 /* Sources */,
+				DE12D638168C73D900D5A5A8 /* Frameworks */,
+				DE12D639168C73D900D5A5A8 /* Resources */,
+				DE12D63A168C73D900D5A5A8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE12D642168C73D900D5A5A8 /* PBXTargetDependency */,
+			);
+			name = CLBSimulatorAppTests;
+			productName = CLBSimulatorAppTests;
+			productReference = DE12D63C168C73D900D5A5A8 /* CLBSimulatorAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE12D60C168C73D900D5A5A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Daniel Schmidt";
+			};
+			buildConfigurationList = DE12D60F168C73D900D5A5A8 /* Build configuration list for PBXProject "CLBSimulatorApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DE12D60A168C73D900D5A5A8;
+			productRefGroup = DE12D616168C73D900D5A5A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE12D614168C73D900D5A5A8 /* CLBSimulatorApp */,
+				DE12D63B168C73D900D5A5A8 /* CLBSimulatorAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE12D613168C73D900D5A5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE12D624168C73D900D5A5A8 /* InfoPlist.strings in Resources */,
+				DE12D62C168C73D900D5A5A8 /* Default.png in Resources */,
+				DE12D62E168C73D900D5A5A8 /* Default@2x.png in Resources */,
+				DE12D630168C73D900D5A5A8 /* Default-568h@2x.png in Resources */,
+				DE12D633168C73D900D5A5A8 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12D639168C73D900D5A5A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE12D648168C73D900D5A5A8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DE12D63A168C73D900D5A5A8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE12D611168C73D900D5A5A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE12D626168C73D900D5A5A8 /* main.m in Sources */,
+				DE12D62A168C73D900D5A5A8 /* AppDelegate.m in Sources */,
+				DE12D636168C73D900D5A5A8 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12D637168C73D900D5A5A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE12D64B168C73D900D5A5A8 /* CLBSimulatorAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE12D642168C73D900D5A5A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE12D614168C73D900D5A5A8 /* CLBSimulatorApp */;
+			targetProxy = DE12D641168C73D900D5A5A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE12D622168C73D900D5A5A8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE12D623168C73D900D5A5A8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DE12D631168C73D900D5A5A8 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE12D632168C73D900D5A5A8 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		DE12D646168C73D900D5A5A8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE12D647168C73D900D5A5A8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE12D64C168C73D900D5A5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DE12D64D168C73D900D5A5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE12D64F168C73D900D5A5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CLBSimulatorApp/CLBSimulatorApp-Prefix.pch";
+				INFOPLIST_FILE = "CLBSimulatorApp/CLBSimulatorApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/CLBSimulator-fmfqgyczkxzymbdoeverqyxoxzvw/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DE12D650168C73D900D5A5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CLBSimulatorApp/CLBSimulatorApp-Prefix.pch";
+				INFOPLIST_FILE = "CLBSimulatorApp/CLBSimulatorApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/CLBSimulator-fmfqgyczkxzymbdoeverqyxoxzvw/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DE12D652168C73D900D5A5A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CLBSimulatorApp.app/CLBSimulatorApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CLBSimulatorApp/CLBSimulatorApp-Prefix.pch";
+				INFOPLIST_FILE = "CLBSimulatorAppTests/CLBSimulatorAppTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/CLBSimulator-fmfqgyczkxzymbdoeverqyxoxzvw/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DE12D653168C73D900D5A5A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CLBSimulatorApp.app/CLBSimulatorApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CLBSimulatorApp/CLBSimulatorApp-Prefix.pch";
+				INFOPLIST_FILE = "CLBSimulatorAppTests/CLBSimulatorAppTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/CLBSimulator-fmfqgyczkxzymbdoeverqyxoxzvw/Build/Products/Debug-iphoneos\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE12D60F168C73D900D5A5A8 /* Build configuration list for PBXProject "CLBSimulatorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE12D64C168C73D900D5A5A8 /* Debug */,
+				DE12D64D168C73D900D5A5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE12D64E168C73D900D5A5A8 /* Build configuration list for PBXNativeTarget "CLBSimulatorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE12D64F168C73D900D5A5A8 /* Debug */,
+				DE12D650168C73D900D5A5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DE12D651168C73D900D5A5A8 /* Build configuration list for PBXNativeTarget "CLBSimulatorAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE12D652168C73D900D5A5A8 /* Debug */,
+				DE12D653168C73D900D5A5A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE12D60C168C73D900D5A5A8 /* Project object */;
+}
