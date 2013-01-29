@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE07449F16B7CF11006FA845 /* logo_uks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE07449E16B7CF11006FA845 /* logo_uks.jpg */; };
 		DE12D4C7168C64DA00D5A5A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D4C6168C64DA00D5A5A8 /* UIKit.framework */; };
 		DE12D4C9168C64DA00D5A5A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D4C8168C64DA00D5A5A8 /* Foundation.framework */; };
 		DE12D4CB168C64DA00D5A5A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12D4CA168C64DA00D5A5A8 /* CoreGraphics.framework */; };
@@ -22,14 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DE12D4C2168C64DA00D5A5A8 /* ScrollViewDetailed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewDetailed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE07449E16B7CF11006FA845 /* logo_uks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo_uks.jpg; path = ../../../../../Downloads/logo_uks.jpg; sourceTree = "<group>"; };
+		DE12D4C2168C64DA00D5A5A8 /* GestureRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE12D4C6168C64DA00D5A5A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DE12D4C8168C64DA00D5A5A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE12D4CA168C64DA00D5A5A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DE12D4CE168C64DA00D5A5A8 /* ScrollViewDetailed-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScrollViewDetailed-Info.plist"; sourceTree = "<group>"; };
+		DE12D4CE168C64DA00D5A5A8 /* GestureRecognizer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GestureRecognizer-Info.plist"; sourceTree = "<group>"; };
 		DE12D4D0168C64DA00D5A5A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE12D4D2168C64DA00D5A5A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DE12D4D4168C64DA00D5A5A8 /* ScrollViewDetailed-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScrollViewDetailed-Prefix.pch"; sourceTree = "<group>"; };
+		DE12D4D4168C64DA00D5A5A8 /* GestureRecognizer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GestureRecognizer-Prefix.pch"; sourceTree = "<group>"; };
 		DE12D4D5168C64DA00D5A5A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DE12D4D6168C64DA00D5A5A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DE12D4D8168C64DA00D5A5A8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -67,7 +69,7 @@
 		DE12D4C3168C64DA00D5A5A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE12D4C2168C64DA00D5A5A8 /* ScrollViewDetailed.app */,
+				DE12D4C2168C64DA00D5A5A8 /* GestureRecognizer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +87,7 @@
 		DE12D4CC168C64DA00D5A5A8 /* ScrollViewDetailed */ = {
 			isa = PBXGroup;
 			children = (
+				DE07449E16B7CF11006FA845 /* logo_uks.jpg */,
 				DE12D4D5168C64DA00D5A5A8 /* AppDelegate.h */,
 				DE12D4D6168C64DA00D5A5A8 /* AppDelegate.m */,
 				DE12D4DE168C64DA00D5A5A8 /* MainStoryboard_iPhone.storyboard */,
@@ -99,10 +102,10 @@
 		DE12D4CD168C64DA00D5A5A8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DE12D4CE168C64DA00D5A5A8 /* ScrollViewDetailed-Info.plist */,
+				DE12D4CE168C64DA00D5A5A8 /* GestureRecognizer-Info.plist */,
 				DE12D4CF168C64DA00D5A5A8 /* InfoPlist.strings */,
 				DE12D4D2168C64DA00D5A5A8 /* main.m */,
-				DE12D4D4168C64DA00D5A5A8 /* ScrollViewDetailed-Prefix.pch */,
+				DE12D4D4168C64DA00D5A5A8 /* GestureRecognizer-Prefix.pch */,
 				DE12D4D8168C64DA00D5A5A8 /* Default.png */,
 				DE12D4DA168C64DA00D5A5A8 /* Default@2x.png */,
 				DE12D4DC168C64DA00D5A5A8 /* Default-568h@2x.png */,
@@ -113,9 +116,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE12D4C1168C64DA00D5A5A8 /* ScrollViewDetailed */ = {
+		DE12D4C1168C64DA00D5A5A8 /* GestureRecognizer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE12D4E9168C64DA00D5A5A8 /* Build configuration list for PBXNativeTarget "ScrollViewDetailed" */;
+			buildConfigurationList = DE12D4E9168C64DA00D5A5A8 /* Build configuration list for PBXNativeTarget "GestureRecognizer" */;
 			buildPhases = (
 				DE12D4BE168C64DA00D5A5A8 /* Sources */,
 				DE12D4BF168C64DA00D5A5A8 /* Frameworks */,
@@ -125,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = ScrollViewDetailed;
+			name = GestureRecognizer;
 			productName = ScrollViewDetailed;
-			productReference = DE12D4C2168C64DA00D5A5A8 /* ScrollViewDetailed.app */;
+			productReference = DE12D4C2168C64DA00D5A5A8 /* GestureRecognizer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,7 +142,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Daniel Schmidt";
 			};
-			buildConfigurationList = DE12D4BC168C64DA00D5A5A8 /* Build configuration list for PBXProject "ScrollViewDetailed" */;
+			buildConfigurationList = DE12D4BC168C64DA00D5A5A8 /* Build configuration list for PBXProject "GestureRecognizer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -151,7 +154,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE12D4C1168C64DA00D5A5A8 /* ScrollViewDetailed */,
+				DE12D4C1168C64DA00D5A5A8 /* GestureRecognizer */,
 			);
 		};
 /* End PBXProject section */
@@ -167,6 +170,7 @@
 				DE12D4DD168C64DA00D5A5A8 /* Default-568h@2x.png in Resources */,
 				DE12D4E0168C64DA00D5A5A8 /* MainStoryboard_iPhone.storyboard in Resources */,
 				DE12D4E3168C64DA00D5A5A8 /* MainStoryboard_iPad.storyboard in Resources */,
+				DE07449F16B7CF11006FA845 /* logo_uks.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,9 +273,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ScrollViewDetailed/ScrollViewDetailed-Prefix.pch";
-				INFOPLIST_FILE = "ScrollViewDetailed/ScrollViewDetailed-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ScrollViewDetailed/GestureRecognizer-Prefix.pch";
+				INFOPLIST_FILE = "ScrollViewDetailed/GestureRecognizer-Info.plist";
+				PRODUCT_NAME = GestureRecognizer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -280,9 +284,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ScrollViewDetailed/ScrollViewDetailed-Prefix.pch";
-				INFOPLIST_FILE = "ScrollViewDetailed/ScrollViewDetailed-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ScrollViewDetailed/GestureRecognizer-Prefix.pch";
+				INFOPLIST_FILE = "ScrollViewDetailed/GestureRecognizer-Info.plist";
+				PRODUCT_NAME = GestureRecognizer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -290,7 +294,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE12D4BC168C64DA00D5A5A8 /* Build configuration list for PBXProject "ScrollViewDetailed" */ = {
+		DE12D4BC168C64DA00D5A5A8 /* Build configuration list for PBXProject "GestureRecognizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE12D4E7168C64DA00D5A5A8 /* Debug */,
@@ -299,13 +303,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE12D4E9168C64DA00D5A5A8 /* Build configuration list for PBXNativeTarget "ScrollViewDetailed" */ = {
+		DE12D4E9168C64DA00D5A5A8 /* Build configuration list for PBXNativeTarget "GestureRecognizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE12D4EA168C64DA00D5A5A8 /* Debug */,
 				DE12D4EB168C64DA00D5A5A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -39,43 +39,6 @@
     <resources>
         <image name="BigApple.jpg" width="1280" height="1024"/>
     </resources>
-    <classes>
-        <class className="TriangleView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TriangleView.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="Convert:"/>
-                <relationship kind="action" name="CopyText:"/>
-                <relationship kind="action" name="asd:"/>
-                <relationship kind="action" name="btnAnimate:"/>
-                <relationship kind="action" name="btnCalcDateDifference:"/>
-                <relationship kind="action" name="btnConvert:"/>
-                <relationship kind="action" name="btnConvertBin:"/>
-                <relationship kind="action" name="btnConvertHex:"/>
-                <relationship kind="action" name="btnConvertToBin:"/>
-                <relationship kind="action" name="btnCopy:"/>
-                <relationship kind="outlet" name="apple" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="cherry" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lblDifference" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblFuss" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblMeters" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblOutput" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblText" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblZentimeters" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblZoll" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="melon" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="orange" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="scrollApple" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="triangleView" candidateClass="TriangleView"/>
-                <relationship kind="outlet" name="txtEndDate" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtInput" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtStartDate" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtText" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
