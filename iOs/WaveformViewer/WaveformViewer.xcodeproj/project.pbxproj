@@ -23,6 +23,12 @@
 		DE04DC1C16BFB8DA00D7A59F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE04DBF716BFB8DA00D7A59F /* Foundation.framework */; };
 		DE04DC2416BFB8DA00D7A59F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC2216BFB8DA00D7A59F /* InfoPlist.strings */; };
 		DE04DC2716BFB8DA00D7A59F /* WaveformViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC2616BFB8DA00D7A59F /* WaveformViewerTests.m */; };
+		DE04DC3516BFBE9400D7A59F /* Signal.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC3216BFBE9400D7A59F /* Signal.m */; };
+		DE04DC3616BFBE9400D7A59F /* Signal.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC3216BFBE9400D7A59F /* Signal.m */; };
+		DE04DC3716BFBE9400D7A59F /* VCDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC3416BFBE9400D7A59F /* VCDParser.m */; };
+		DE04DC3816BFBE9400D7A59F /* VCDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC3416BFBE9400D7A59F /* VCDParser.m */; };
+		DE04DC3A16BFCBC700D7A59F /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC3916BFCBC700D7A59F /* appicon.png */; };
+		DE04DC3C16BFCBE800D7A59F /* appiconX2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC3B16BFCBE800D7A59F /* appiconX2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,12 @@
 		DE04DC2316BFB8DA00D7A59F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE04DC2516BFB8DA00D7A59F /* WaveformViewerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaveformViewerTests.h; sourceTree = "<group>"; };
 		DE04DC2616BFB8DA00D7A59F /* WaveformViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaveformViewerTests.m; sourceTree = "<group>"; };
+		DE04DC3116BFBE9400D7A59F /* Signal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signal.h; sourceTree = "<group>"; };
+		DE04DC3216BFBE9400D7A59F /* Signal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signal.m; sourceTree = "<group>"; };
+		DE04DC3316BFBE9400D7A59F /* VCDParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCDParser.h; sourceTree = "<group>"; };
+		DE04DC3416BFBE9400D7A59F /* VCDParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCDParser.m; sourceTree = "<group>"; };
+		DE04DC3916BFCBC700D7A59F /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
+		DE04DC3B16BFCBE800D7A59F /* appiconX2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appiconX2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,8 @@
 		DE04DBE916BFB8DA00D7A59F = {
 			isa = PBXGroup;
 			children = (
+				DE04DC3B16BFCBE800D7A59F /* appiconX2.png */,
+				DE04DC3916BFCBC700D7A59F /* appicon.png */,
 				DE04DBFB16BFB8DA00D7A59F /* WaveformViewer */,
 				DE04DC1F16BFB8DA00D7A59F /* WaveformViewerTests */,
 				DE04DBF416BFB8DA00D7A59F /* Frameworks */,
@@ -117,6 +131,7 @@
 		DE04DBFB16BFB8DA00D7A59F /* WaveformViewer */ = {
 			isa = PBXGroup;
 			children = (
+				DE04DC3016BFBE7500D7A59F /* model */,
 				DE04DC0416BFB8DA00D7A59F /* AppDelegate.h */,
 				DE04DC0516BFB8DA00D7A59F /* AppDelegate.m */,
 				DE04DC0D16BFB8DA00D7A59F /* MainStoryboard.storyboard */,
@@ -158,6 +173,17 @@
 				DE04DC2216BFB8DA00D7A59F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE04DC3016BFBE7500D7A59F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DE04DC3116BFBE9400D7A59F /* Signal.h */,
+				DE04DC3216BFBE9400D7A59F /* Signal.m */,
+				DE04DC3316BFBE9400D7A59F /* VCDParser.h */,
+				DE04DC3416BFBE9400D7A59F /* VCDParser.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +262,8 @@
 				DE04DC0A16BFB8DA00D7A59F /* Default@2x.png in Resources */,
 				DE04DC0C16BFB8DA00D7A59F /* Default-568h@2x.png in Resources */,
 				DE04DC0F16BFB8DA00D7A59F /* MainStoryboard.storyboard in Resources */,
+				DE04DC3A16BFCBC700D7A59F /* appicon.png in Resources */,
+				DE04DC3C16BFCBE800D7A59F /* appiconX2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +301,8 @@
 				DE04DC0216BFB8DA00D7A59F /* main.m in Sources */,
 				DE04DC0616BFB8DA00D7A59F /* AppDelegate.m in Sources */,
 				DE04DC1216BFB8DA00D7A59F /* ViewController.m in Sources */,
+				DE04DC3516BFBE9400D7A59F /* Signal.m in Sources */,
+				DE04DC3716BFBE9400D7A59F /* VCDParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +311,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE04DC2716BFB8DA00D7A59F /* WaveformViewerTests.m in Sources */,
+				DE04DC3616BFBE9400D7A59F /* Signal.m in Sources */,
+				DE04DC3816BFBE9400D7A59F /* VCDParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
