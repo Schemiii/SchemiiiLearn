@@ -8,15 +8,21 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+@synthesize parser;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
+  NSString *vcdFile = @"simple";
+  NSString *path = [[NSBundle mainBundle] pathForResource:vcdFile ofType:@"vcd"];
+  self.parser = [[VCDParser alloc] initWithVCDFile:path];
+  [self.parser parse];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 - (void)didReceiveMemoryWarning
@@ -27,11 +33,16 @@
 ///**** UITableViewDataSourceDelegate required Methods ***************************************
 //Return Signalname in a UITableViewCell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-  return nil;
+  UITableViewCell *cell = [self.signalTable dequeueReusableCellWithIdentifier:@"Cell"];
+  if(cell==nil){
+    cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+  }
+  cell.textLabel.text=[[[self.parser.signalDict allValues] objectAtIndex:indexPath.row] name];
+  return cell;
 }
 //Return the number of Elements in the Table View
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-  return 0;
+  return [[parser.signalDict allValues] count];
 }
 //********************************************************************************************
 //For dynamic drawing : draw line if cell will be displayed

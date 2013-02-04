@@ -29,6 +29,10 @@
 		DE04DC3816BFBE9400D7A59F /* VCDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC3416BFBE9400D7A59F /* VCDParser.m */; };
 		DE04DC3A16BFCBC700D7A59F /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC3916BFCBC700D7A59F /* appicon.png */; };
 		DE04DC3C16BFCBE800D7A59F /* appiconX2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC3B16BFCBE800D7A59F /* appiconX2.png */; };
+		DE04DC4016BFD08000D7A59F /* simple.vcd in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC3E16BFD08000D7A59F /* simple.vcd */; };
+		DE04DC4116BFD08000D7A59F /* simple.vcd in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC3E16BFD08000D7A59F /* simple.vcd */; };
+		DE04DC4216BFD08000D7A59F /* very_simple.vcd in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC3F16BFD08000D7A59F /* very_simple.vcd */; };
+		DE04DC4316BFD08000D7A59F /* very_simple.vcd in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC3F16BFD08000D7A59F /* very_simple.vcd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,8 @@
 		DE04DC3416BFBE9400D7A59F /* VCDParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCDParser.m; sourceTree = "<group>"; };
 		DE04DC3916BFCBC700D7A59F /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
 		DE04DC3B16BFCBE800D7A59F /* appiconX2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appiconX2.png; sourceTree = "<group>"; };
+		DE04DC3E16BFD08000D7A59F /* simple.vcd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simple.vcd; sourceTree = "<group>"; };
+		DE04DC3F16BFD08000D7A59F /* very_simple.vcd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = very_simple.vcd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 		DE04DBFB16BFB8DA00D7A59F /* WaveformViewer */ = {
 			isa = PBXGroup;
 			children = (
+				DE04DC3D16BFD07100D7A59F /* resource */,
 				DE04DC3016BFBE7500D7A59F /* model */,
 				DE04DC0416BFB8DA00D7A59F /* AppDelegate.h */,
 				DE04DC0516BFB8DA00D7A59F /* AppDelegate.m */,
@@ -184,6 +191,15 @@
 				DE04DC3416BFBE9400D7A59F /* VCDParser.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		DE04DC3D16BFD07100D7A59F /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				DE04DC3E16BFD08000D7A59F /* simple.vcd */,
+				DE04DC3F16BFD08000D7A59F /* very_simple.vcd */,
+			);
+			name = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +280,8 @@
 				DE04DC0F16BFB8DA00D7A59F /* MainStoryboard.storyboard in Resources */,
 				DE04DC3A16BFCBC700D7A59F /* appicon.png in Resources */,
 				DE04DC3C16BFCBE800D7A59F /* appiconX2.png in Resources */,
+				DE04DC4016BFD08000D7A59F /* simple.vcd in Resources */,
+				DE04DC4216BFD08000D7A59F /* very_simple.vcd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +290,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE04DC2416BFB8DA00D7A59F /* InfoPlist.strings in Resources */,
+				DE04DC4116BFD08000D7A59F /* simple.vcd in Resources */,
+				DE04DC4316BFD08000D7A59F /* very_simple.vcd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

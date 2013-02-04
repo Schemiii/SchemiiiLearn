@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "VCDParser.h"
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *signalTable;
 
+@property (weak, nonatomic) IBOutlet UITableView *signalTable;
+@property  VCDParser *parser;
 @end
