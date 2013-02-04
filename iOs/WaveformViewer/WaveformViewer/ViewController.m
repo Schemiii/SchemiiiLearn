@@ -22,7 +22,7 @@
   [super viewDidLoad];
   NSString *vcdFile = @"simple";
   self.signalHeight=50;
-  self.signalTimeUnitInPx=2;
+  self.signalTimeUnitInPx=5;
   NSString *path = [[NSBundle mainBundle] pathForResource:vcdFile ofType:@"vcd"];
   self.parser = [[VCDParser alloc] initWithVCDFile:path];
   [self.parser parse];
@@ -36,9 +36,10 @@
   r.size.height=self.signalHeight;
   r.size.width=signalDisplayLengthPx;
   for(Signal *s in [parser.signalDict allValues]){
-    SignalView *sv = [[SignalView alloc] initWithFrame:r];
+    SignalView *sv = [[SignalView alloc] initWithFrame:r andLineHeightInPx:self.signalHeight];
     sv.backgroundColor=[UIColor clearColor];
-    [self.signalScrView addSubview:sv];
+    sv.timeUnitLengthInPx=self.signalTimeUnitInPx;
+    [self.signalScrView addSubview:sv]; 
     [signalViewNameDict setObject:sv forKey:s.name];
     r.origin.y+=self.signalHeight;
   }
@@ -53,7 +54,6 @@
         //Get SignalView reference
         SignalView* sv = [signalViewNameDict objectForKey:signal.name];
         [sv addSignalValue:value ForTime:time];
-        
       }
     }
   }

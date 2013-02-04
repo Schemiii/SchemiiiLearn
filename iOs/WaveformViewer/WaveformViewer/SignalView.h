@@ -11,6 +11,7 @@
 @interface SignalView : UIView
 @property (readonly,nonatomic)  CGFloat lineHeightPx;
 @property (readwrite,nonatomic) CGFloat timeUnitLengthInPx;
+- (id)initWithFrame:(CGRect)frame andLineHeightInPx : (CGFloat) lineHeight;
 - (void) setTimeUnitLengthInPx:(CGFloat)timeUnitLengthInPx;
 - (void) addSignalValue : (NSString*) value ForTime : (NSNumber*) time;
 - (void) clearSignalValues;
