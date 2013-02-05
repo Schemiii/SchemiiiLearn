@@ -29,6 +29,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="4Qk-AC-nEW" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="05n-YQ-sx2"/>
                             <constraint firstItem="4Qk-AC-nEW" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="102" id="Pa0-He-4rN"/>
@@ -39,6 +40,10 @@
                             <constraint firstItem="4Qk-AC-nEW" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="xkE-Ac-ycP"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="asW-HC-6iQ" appends="YES" id="9sU-zz-NQ0"/>
+                            <outletCollection property="gestureRecognizers" destination="Ljb-ce-7Eb" appends="YES" id="0Kv-GK-lNf"/>
+                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -48,6 +53,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="asW-HC-6iQ">
+                    <connections>
+                        <action selector="signalsDoubleTap:" destination="2" id="WzR-09-AkP"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="Ljb-ce-7Eb">
+                    <connections>
+                        <action selector="signalSwipe:" destination="2" id="4eG-7w-qub"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
         </scene>
     </scenes>
@@ -58,6 +73,8 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="signalSwipe:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="signalsDoubleTap:" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="outlet" name="signalScrView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="signalTable" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="signalTableWidth" candidateClass="NSLayoutConstraint"/>

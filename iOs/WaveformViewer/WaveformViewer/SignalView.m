@@ -14,7 +14,7 @@
 @end
 
 @implementation SignalView
-@synthesize cgPoints,timeUnitLengthInPx=_timeUnitLengthInPx,lastPoint,lineHeightPx=_lineHeightPx;
+@synthesize cgPoints,timeUnitLengthInPx=_timeUnitLengthInPx,lastPoint,lineHeightPx=_lineHeightPx,signalName,simTimeFrom,simTimeTo;
 - (id)initWithFrame:(CGRect)frame andLineHeightInPx : (CGFloat) lineHeight
 {
     self = [super initWithFrame:frame];
@@ -49,7 +49,73 @@
 - (void) clearSignalValues{
   
 }
-
+- (void) drawIntervallFromPoint : (CGPoint) fPoint toPoint :(CGPoint) tPoint inContext :(CGContextRef) context{
+  CGContextBeginPath(context);
+  //Beide definiert
+  if(fPoint.y>=0&&tPoint.y>=0){
+    CGContextSetLineWidth(context, 2.0);
+    CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);
+      //Gleiche Höhe
+    if(fPoint.y==tPoint.y){
+      if(fPoint.y==0){
+        CGContextMoveToPoint(context, fPoint.x, self.lineHeightPx);
+        CGContextAddLineToPoint(context, tPoint.x, self.lineHeightPx);
+      }else{
+        CGContextMoveToPoint(context, fPoint.x, 0);
+         CGContextAddLineToPoint(context, tPoint.x, 0);
+      }
+    }//Ungleiche Höhe
+    else{
+      if(fPoint.y==0){
+        CGContextMoveToPoint(context, fPoint.x, self.lineHeightPx);
+        CGContextAddLineToPoint(context, tPoint.x, self.lineHeightPx);
+        CGContextAddLineToPoint(context, tPoint.x, 0);
+      }else{
+        CGContextMoveToPoint(context, fPoint.x, 0);
+        CGContextAddLineToPoint(context, tPoint.x, 0);
+        CGContextAddLineToPoint(context, tPoint.x, self.lineHeightPx);
+      }
+    }
+  }//Undefiniert nach definiert
+  else if(fPoint.y==-2&&tPoint.y>=0){
+    CGContextSetStrokeColorWithColor(context, [[UIColor yellowColor] CGColor]);
+    CGContextSetLineWidth(context, 5.0);
+    //1)Teile die undefinierte Strecke in n gleich breite wie hohe teilstrecken
+    int n = floor(tPoint.x-fPoint.x)/self.lineHeightPx;
+    CGContextMoveToPoint(context, fPoint.x, 0);
+    //2)Zeichne in jede volle Teilstrecke ein gelbes x
+    for (int i=0;i<=n;i++){
+      CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx);
+      CGContextMoveToPoint(context, fPoint.x, self.lineHeightPx);
+      CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), 0);
+    }
+  }//Definiert nach undefiniert
+  else if(fPoint.y>=0&&tPoint.y==-2){
+    if(fPoint.y==0){
+      CGContextMoveToPoint(context, fPoint.x, self.lineHeightPx);
+      CGContextAddLineToPoint(context, tPoint.x, self.lineHeightPx);
+    }else{
+      CGContextMoveToPoint(context, fPoint.x, 0);
+      CGContextAddLineToPoint(context, tPoint.x, 0);
+    }
+      
+  }//Hochohmig nach definiert
+  else if(fPoint.y==-1&&tPoint.y>=0){
+    
+  }//definiert nach hochohmig
+  else if(fPoint.y>=0&&tPoint.y==-1){
+    
+  }//undefiniert nach hochohmig
+  else if(fPoint.y==-2 && tPoint.y==-1){
+    
+  }//hochohmig nach undefiniert
+  else if(fPoint.y==-1&&tPoint.y==-2){
+    
+  }
+  
+  
+  CGContextStrokePath(context);
+}
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
@@ -59,38 +125,25 @@
   CGContextRef context = UIGraphicsGetCurrentContext();
   CGContextSetLineWidth(context, 2.0);
   
-  CGContextBeginPath(context);
-  // Move through signalpoint list and draw
-  for (NSValue *val in self.cgPoints) {
-    CGPoint p =[val CGPointValue];
-    if(lastPoint.x==p.x){//Erster Punkt oder Änderung ohne Zeitvergehen
-      if(p.y==0){//Signal startet bei LOW
-        CGContextMoveToPoint(context, 0,rect.size.height);
-      }else if(p.y==1){//Signal startet bei HIGH
-        CGContextMoveToPoint(context, 0,0);
-      }else { //Signal undefiniert oder hochohmig
-        CGContextMoveToPoint(context, 0,rect.size.height/2.);
-      }
-      lastPoint=p;
-    }else{ //Neuer Punkt
-      if(p.y>=0) {//Signal ist definiert
-        if(lastPoint.y>=0){//letzter Zeitpunkt war definiert
-          //Zeichne Linie auf letzter Höhe bis zum aktuellen x
-          CGContextAddLineToPoint(context, p.x*self.timeUnitLengthInPx, lastPoint.y*self.lineHeightPx);
-          CGContextAddLineToPoint(context, p.x*self.timeUnitLengthInPx, p.y*self.lineHeightPx);
-        }
-        else{ //letzter Punkt war undefiniert
-        }
-      }
-      else { //Signal undefiniert oder hochohmig
-        CGContextMoveToPoint(context, 0,rect.size.height/2.);
-      }
-      lastPoint=p;
-    }
-    //Für jeden Abschnitt, zeichne Pfad
+  //Alternativer Ansatz: Es wird einfach nur für jeden Zwischenabschnitt gezeichnet.
+  //Dann kann auch mit Farben, Formen leichter gezeichnet werden.
+
+  if([self.cgPoints count]>0){
+    for (int i=0; i<[self.cgPoints count]-1; i++) {
+      //Draw every Pair of Points
+      CGPoint from,to;
+    //TODO?Wenn das Punktpaar in den zu zeichnenden Intervallgrenzen liegt, zeichne es
+      from=CGPointMake([[self.cgPoints objectAtIndex:i]CGPointValue].x*self.timeUnitLengthInPx, [[self.cgPoints objectAtIndex:i]CGPointValue].y);
+      to=CGPointMake([[self.cgPoints objectAtIndex:i+1]CGPointValue].x*self.timeUnitLengthInPx, [[self.cgPoints objectAtIndex:i+1]CGPointValue].y);
+      [self drawIntervallFromPoint:from toPoint:to inContext:context];
     
+    }
+    //Manually add a last Point
+    CGPoint from=CGPointMake([[self.cgPoints lastObject] CGPointValue].x*self.timeUnitLengthInPx, [[self.cgPoints lastObject] CGPointValue].y);
+    [self drawIntervallFromPoint:from
+                         toPoint:CGPointMake(rect.size.width, [[self.cgPoints lastObject] CGPointValue].y) inContext:context];
   }
-  CGContextStrokePath(context);
+  
 }
 
 
