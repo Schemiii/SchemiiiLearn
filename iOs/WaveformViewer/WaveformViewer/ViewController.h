@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "VCDParser.h"
+#import "GridView.h"
 @interface ViewController : UIViewController<UITableViewDataSource,UIScrollViewDelegate>
 @property (weak,nonatomic)  IBOutlet UIScrollView *signalScrView;
 @property (weak,nonatomic)  IBOutlet UITableView *signalTable;
@@ -17,11 +18,14 @@
 @property (readonly,nonatomic) CGFloat signalDrawHeight;
 @property (readwrite,nonatomic) CGFloat signalTimeUnitInPx;
 @property (readwrite,nonatomic) CGFloat signalLength;
+
 @property (strong,nonatomic) NSMutableDictionary *signalViewNameDict;
 @property CGFloat simTimeFrom,simTimeTo;
 
 -(IBAction) signalsDoubleTap : (UITapGestureRecognizer*) gesture;
 
 -(IBAction) signalSwipe : (UIPinchGestureRecognizer*) gesture;
+
+-(IBAction) signalToogleTimeGrid : (UILongPressGestureRecognizer*) gesture;
 
 @end

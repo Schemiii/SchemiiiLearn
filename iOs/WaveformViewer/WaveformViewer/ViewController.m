@@ -24,17 +24,17 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  NSString *vcdFile = @"very_simple";
-  self.signalRectHeight=50;
-  self.signalDrawHeight=40;
+  NSString *vcdFile = @"simple";
+  self.signalRectHeight=60;
+  self.signalDrawHeight=50;
   self.signalTimeUnitInPx=3;
   NSString *path = [[NSBundle mainBundle] pathForResource:vcdFile ofType:@"vcd"];
   self.parser = [[VCDParser alloc] initWithVCDFile:path];
   [self.parser parse];
   [self.signalTable setRowHeight:self.signalRectHeight];
   //Standard :
-  self.simTimeFrom=60;
-  self.simTimeTo=150;
+  self.simTimeFrom=0;
+  self.simTimeTo=1000;
   
   CGFloat signalDisplayLengthPx=(self.simTimeTo-self.simTimeFrom)*self.signalTimeUnitInPx;
   self.signalScrView.contentSize = CGSizeMake(signalDisplayLengthPx, [[parser.signalDict allValues] count]*self.signalRectHeight);
@@ -43,6 +43,7 @@
   CGRect r;
   r.origin.x=0;
   r.size.height=self.signalRectHeight;
+  self.signalGrid=[[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
   r.size.width=signalDisplayLengthPx;
   for(Signal *s in [parser.signalDict allValues]){
     SignalView *sv = [[SignalView alloc] initWithFrame:r andLineHeightInPx:self.signalDrawHeight];
@@ -138,8 +139,13 @@
     [self updateSignalViewsWithNewSignalTime];
   }
 }
+- (void)signalToogleTimeGrid:(UILongPressGestureRecognizer *)gesture{
+  if(gesture.state==UIGestureRecognizerStateBegan){
+
+  }
+}
 //********************************************************************************************
-//BUG
+
 - (void) updateSignalViewsWithNewSignalTime{
   CGRect r;
   r.origin.x=0;

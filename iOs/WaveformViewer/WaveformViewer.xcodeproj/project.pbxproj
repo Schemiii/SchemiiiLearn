@@ -515,6 +515,7 @@
 				DE04DC2C16BFB8DA00D7A59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE04DC2D16BFB8DA00D7A59F /* Build configuration list for PBXNativeTarget "WaveformViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +524,7 @@
 				DE04DC2F16BFB8DA00D7A59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

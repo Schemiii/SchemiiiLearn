@@ -43,6 +43,7 @@
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="asW-HC-6iQ" appends="YES" id="9sU-zz-NQ0"/>
                             <outletCollection property="gestureRecognizers" destination="Ljb-ce-7Eb" appends="YES" id="0Kv-GK-lNf"/>
+                            <outletCollection property="gestureRecognizers" destination="TQP-Fi-D9C" appends="YES" id="SxH-qG-X9g"/>
                         </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -63,6 +64,11 @@
                         <action selector="signalSwipe:" destination="2" id="4eG-7w-qub"/>
                     </connections>
                 </pinchGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="TQP-Fi-D9C">
+                    <connections>
+                        <action selector="signalToogleTimeGrid:" destination="2" id="WeV-6y-Jqd"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
         </scene>
     </scenes>
@@ -74,6 +80,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="signalSwipe:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="signalToogleTimeGrid:" candidateClass="UILongPressGestureRecognizer"/>
                 <relationship kind="action" name="signalsDoubleTap:" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="outlet" name="signalScrView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="signalTable" candidateClass="UITableView"/>
