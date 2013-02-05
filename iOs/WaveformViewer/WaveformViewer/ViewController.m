@@ -24,7 +24,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  NSString *vcdFile = @"very_simple";
+  NSString *vcdFile = @"simple";
   self.signalRectHeight=50;
   self.signalDrawHeight=40;
   self.signalTimeUnitInPx=3;
@@ -139,12 +139,15 @@
   r.origin.x=0;
   r.size.height=self.signalRectHeight;
   r.size.width=(self.simTimeTo-self.simTimeFrom)*self.signalTimeUnitInPx;
-  for (SignalView *sv in [self.signalViewNameDict allValues]) {
+  //Keep the order safe
+  for (int i=0; i<[[self.parser.signalDict allValues] count]; i++) {
+    NSString* sname=[[[self.parser.signalDict allValues] objectAtIndex:i]name];
+    SignalView *sv=[self.signalViewNameDict objectForKey:sname];
     sv.frame=r;
     sv.timeUnitLengthInPx=self.signalTimeUnitInPx;
     r.origin.y+=self.signalRectHeight;
   }
-  self.signalScrView.contentSize = CGSizeMake(r.size.width, [[parser.signalDict allValues] count]*self.signalRectHeight);
+   self.signalScrView.contentSize = CGSizeMake(r.size.width, [[parser.signalDict allValues] count]*self.signalRectHeight);
 }
 
 @end
