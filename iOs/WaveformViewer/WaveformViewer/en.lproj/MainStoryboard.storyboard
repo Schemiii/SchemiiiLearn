@@ -44,6 +44,8 @@
                             <outletCollection property="gestureRecognizers" destination="asW-HC-6iQ" appends="YES" id="9sU-zz-NQ0"/>
                             <outletCollection property="gestureRecognizers" destination="Ljb-ce-7Eb" appends="YES" id="0Kv-GK-lNf"/>
                             <outletCollection property="gestureRecognizers" destination="TQP-Fi-D9C" appends="YES" id="SxH-qG-X9g"/>
+                            <outletCollection property="gestureRecognizers" destination="4B8-fw-lSQ" appends="YES" id="7kQ-nw-xbH"/>
+                            <outletCollection property="gestureRecognizers" destination="qQH-oY-kCJ" appends="YES" id="lMJ-7m-WfE"/>
                         </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -66,9 +68,19 @@
                 </pinchGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="TQP-Fi-D9C">
                     <connections>
-                        <action selector="signalToogleTimeGrid:" destination="2" id="WeV-6y-Jqd"/>
+                        <action selector="signalToogleTime:" destination="2" id="Vp2-e5-GD0"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" numberOfTouchesRequired="2" id="4B8-fw-lSQ">
+                    <connections>
+                        <action selector="signalToogleTimeGrid:" destination="2" id="7Az-h5-HhW"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="qQH-oY-kCJ">
+                    <connections>
+                        <action selector="signalsSingleTap:" destination="2" id="34z-R3-3a1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
@@ -79,9 +91,12 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="signalRotation:" candidateClass="UIRotationGestureRecognizer"/>
                 <relationship kind="action" name="signalSwipe:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="signalToogleTime:" candidateClass="UILongPressGestureRecognizer"/>
                 <relationship kind="action" name="signalToogleTimeGrid:" candidateClass="UILongPressGestureRecognizer"/>
                 <relationship kind="action" name="signalsDoubleTap:" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="action" name="signalsSingleTap:" candidateClass="UITapGestureRecognizer"/>
                 <relationship kind="outlet" name="signalScrView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="signalTable" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="signalTableWidth" candidateClass="NSLayoutConstraint"/>

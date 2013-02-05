@@ -19,12 +19,12 @@
 @end
 
 @implementation ViewController
-@synthesize parser,signalRectHeight=_signalHeight,signalViewNameDict,signalDrawHeight=_signalDrawHeight,simTimeFrom,simTimeTo;
+@synthesize parser,signalRectHeight=_signalHeight,signalViewNameDict,signalDrawHeight=_signalDrawHeight,simTimeFrom,simTimeTo,timerswitch;
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  NSString *vcdFile = @"simple";
+  NSString *vcdFile = @"very_simple";
   self.signalRectHeight=60;
   self.signalDrawHeight=50;
   self.signalTimeUnitInPx=3;
@@ -34,7 +34,7 @@
   [self.signalTable setRowHeight:self.signalRectHeight];
   //Standard :
   self.simTimeFrom=0;
-  self.simTimeTo=1000;
+  self.simTimeTo=90;
   
   CGFloat signalDisplayLengthPx=(self.simTimeTo-self.simTimeFrom)*self.signalTimeUnitInPx;
   self.signalScrView.contentSize = CGSizeMake(signalDisplayLengthPx, [[parser.signalDict allValues] count]*self.signalRectHeight);
@@ -43,7 +43,6 @@
   CGRect r;
   r.origin.x=0;
   r.size.height=self.signalRectHeight;
-  self.signalGrid=[[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
   r.size.width=signalDisplayLengthPx;
   for(Signal *s in [parser.signalDict allValues]){
     SignalView *sv = [[SignalView alloc] initWithFrame:r andLineHeightInPx:self.signalDrawHeight];
@@ -125,6 +124,9 @@
     [self updateSignalViewsWithNewSignalTime];
   }
 }
+- (void)signalsSingleTap:(UITapGestureRecognizer *)gesture{
+  //Remove all subviews blabla
+}
 - (void)signalSwipe:(UIPinchGestureRecognizer *)gesture{
   static CGFloat initialScaleValue=INITIALSIGNALTIMEUNITPX;
   if(gesture.state == UIGestureRecognizerStateBegan){
@@ -144,8 +146,22 @@
 
   }
 }
+- (void)signalToogleTime:(UILongPressGestureRecognizer *)gesture{
+  
+}
+//Show Additional View with 2 round buttons where user can increase or decrease the values
+- (void)signalRotation:(UIRotationGestureRecognizer *)gesture{
+  
+}
 //********************************************************************************************
-
+- (void) updateSignalViewsWithNewSimTime{
+  for (int i=0; i<[[self.parser.signalDict allValues] count]; i++) {
+    NSString* sname=[[[self.parser.signalDict allValues] objectAtIndex:i]name];
+    SignalView *sv=[self.signalViewNameDict objectForKey:sname];
+    sv.simTimeFrom=self.simTimeFrom;
+    sv.simTimeTo=self.simTimeTo;
+  }
+}
 - (void) updateSignalViewsWithNewSignalTime{
   CGRect r;
   r.origin.x=0;
