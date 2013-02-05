@@ -217,7 +217,10 @@
       else if(from.x>=self.simTimeFrom&&from.x<=self.simTimeTo&&to.x>self.simTimeTo){
         to.x=self.simTimeTo;
       }//both points in interval
-      //Scaling
+      
+      //Shift left and scale
+      from.x-=self.simTimeFrom;
+      to.x-=self.simTimeFrom;
       from.x*=self.timeUnitLengthInPx;
       to.x*=self.timeUnitLengthInPx;
       [self drawIntervallFromPoint:from toPoint:to inContext:context];
@@ -229,6 +232,7 @@
     if(from.x<=self.simTimeTo){
       if(from.x<self.simTimeFrom)
         from.x=self.simTimeFrom;
+      from.x-=self.simTimeFrom;
       from.x*=self.timeUnitLengthInPx;
       [self drawIntervallFromPoint:from
                            toPoint:CGPointMake(self.simTimeTo*self.timeUnitLengthInPx, [[self.cgPoints lastObject] CGPointValue].y) inContext:context];
