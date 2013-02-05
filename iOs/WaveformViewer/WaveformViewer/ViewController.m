@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Daniel Schmidt. All rights reserved.
 //
 #define INITIALSIGNALTIMEUNITPX 5
-#define MAXSIGNALTIMEUNITPX 10
+#define MAXSIGNALTIMEUNITPX 15
 #define MINSIGNALTIMEUNITPX 2
 
 
@@ -144,6 +144,7 @@
     sv.timeUnitLengthInPx=self.signalTimeUnitInPx;
     r.origin.y+=self.signalRectHeight;
   }
+  self.signalScrView.contentSize = CGSizeMake(r.size.width, [[parser.signalDict allValues] count]*self.signalRectHeight);
 }
 
 @end
