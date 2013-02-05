@@ -66,6 +66,8 @@
       }
     }//Ungleiche Höhe
     else{
+      CGContextSetLineWidth(context, 2.0);
+      CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);
       if(fPoint.y==0){
         CGContextMoveToPoint(context, fPoint.x, self.lineHeightPx);
         CGContextAddLineToPoint(context, tPoint.x, self.lineHeightPx);
@@ -80,17 +82,23 @@
   else if(fPoint.y==-2&&tPoint.y>=0){
     CGContextSetStrokeColorWithColor(context, [[UIColor yellowColor] CGColor]);
     CGContextSetLineWidth(context, 5.0);
-    //1)Teile die undefinierte Strecke in n gleich breite wie hohe teilstrecken
+//Teile die undefinierte Strecke in n gleich breite wie hohe teilstrecken
     int n = floor(tPoint.x-fPoint.x)/self.lineHeightPx;
     CGContextMoveToPoint(context, fPoint.x, 0);
-    //2)Zeichne in jede volle Teilstrecke ein gelbes x
+//Zeichne in jede volle Teilstrecke gelbe linien, die andeuten, dass der wert undefiniert ist.
     for (int i=0;i<=n;i++){
       CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx);
-      CGContextMoveToPoint(context, fPoint.x, self.lineHeightPx);
+      CGContextMoveToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx);
       CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), 0);
     }
+    if(tPoint.y==0)
+      CGContextAddLineToPoint(context, tPoint.x, self.lineHeightPx);
+    else
+      CGContextAddLineToPoint(context, tPoint.x, 0);
   }//Definiert nach undefiniert
   else if(fPoint.y>=0&&tPoint.y==-2){
+    CGContextSetLineWidth(context, 2.0);
+    CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);
     if(fPoint.y==0){
       CGContextMoveToPoint(context, fPoint.x, self.lineHeightPx);
       CGContextAddLineToPoint(context, tPoint.x, self.lineHeightPx);
@@ -101,23 +109,64 @@
       
   }//Hochohmig nach definiert
   else if(fPoint.y==-1&&tPoint.y>=0){
-    
+    CGContextSetStrokeColorWithColor(context, [[UIColor redColor] CGColor]);
+    CGContextSetLineWidth(context, 5.0);
+    //Teile die undefinierte Strecke in n gleich breite wie hohe teilstrecken
+    int n = floor(tPoint.x-fPoint.x)/self.lineHeightPx;
+    CGContextMoveToPoint(context, fPoint.x, 0);
+    //Zeichne in jede volle Teilstrecke gelbe linien, die andeuten, dass der wert undefiniert ist.
+    for (int i=0;i<=n;i++){
+      if(i==0){
+        CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx/3.);
+        CGContextMoveToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx);
+        CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), 0);
+      }else{
+        CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx/3.);
+        CGContextMoveToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx/3.);
+        CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), 0);
+      }
+
+    }
+    if(tPoint.y==0)
+      CGContextAddLineToPoint(context, tPoint.x, self.lineHeightPx);
+    else
+      CGContextAddLineToPoint(context, tPoint.x, 0);
   }//definiert nach hochohmig
   else if(fPoint.y>=0&&tPoint.y==-1){
-    
+    CGContextSetLineWidth(context, 2.0);
+    CGContextSetStrokeColorWithColor(context, [[UIColor blackColor] CGColor]);
+    if(fPoint.y==0){
+      CGContextMoveToPoint(context, fPoint.x, self.lineHeightPx);
+      CGContextAddLineToPoint(context, tPoint.x, self.lineHeightPx);
+    }else{
+      CGContextMoveToPoint(context, fPoint.x, 0);
+      CGContextAddLineToPoint(context, tPoint.x, 0);
+    }
   }//undefiniert nach hochohmig
   else if(fPoint.y==-2 && tPoint.y==-1){
-    
+    CGContextSetStrokeColorWithColor(context, [[UIColor yellowColor] CGColor]);
+    CGContextSetLineWidth(context, 5.0);
+    //Teile die undefinierte Strecke in n gleich breite wie hohe teilstrecken
+    int n = floor(tPoint.x-fPoint.x)/self.lineHeightPx;
+    CGContextMoveToPoint(context, fPoint.x, 0);
+    //Zeichne in jede volle Teilstrecke gelbe linien, die andeuten, dass der wert undefiniert ist.
+    for (int i=0;i<=n;i++){
+      CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx);
+      CGContextMoveToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx);
+      CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), 0);
+    }
+    //Zeichne das letzte Teilstück
+    CGContextAddLineToPoint(context, tPoint.x, 0);
   }//hochohmig nach undefiniert
   else if(fPoint.y==-1&&tPoint.y==-2){
-    
+    NSLog(@"Hochohmig nach definiert");
   }
   
   
   CGContextStrokePath(context);
 }
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
+
+
 - (void)drawRect:(CGRect)rect
 {
   [super drawRect:rect];
@@ -125,9 +174,6 @@
   CGContextRef context = UIGraphicsGetCurrentContext();
   CGContextSetLineWidth(context, 2.0);
   
-  //Alternativer Ansatz: Es wird einfach nur für jeden Zwischenabschnitt gezeichnet.
-  //Dann kann auch mit Farben, Formen leichter gezeichnet werden.
-
   if([self.cgPoints count]>0){
     for (int i=0; i<[self.cgPoints count]-1; i++) {
       //Draw every Pair of Points
