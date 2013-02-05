@@ -24,7 +24,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  NSString *vcdFile = @"simple";
+  NSString *vcdFile = @"very_simple";
   self.signalRectHeight=50;
   self.signalDrawHeight=40;
   self.signalTimeUnitInPx=3;
@@ -63,7 +63,6 @@
       {
         //Get SignalView reference
         SignalView* sv = [signalViewNameDict objectForKey:signal.name];
-        NSLog(@"Signal : %@  Time: %@  Value:%@",signal.name,time,value);
         [sv addSignalValue:value ForTime:time];
       }
     }
@@ -102,7 +101,11 @@
 
 
 ///**** UIScrollViewDelegate Methods ************************************************
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+  if(scrollView==self.signalScrView){
+    [self.signalTable setContentOffset:CGPointMake(0,scrollView.contentOffset.y)];
+  }
+}
 //********************************************************************************************
 
 ///**** UITableViewDelegate Methods ************************************************
