@@ -160,6 +160,27 @@
   }//hochohmig nach undefiniert
   else if(fPoint.y==-1&&tPoint.y==-2){
     NSLog(@"Hochohmig nach definiert");
+  }else if(fPoint.y==-2&&tPoint.y==-2){
+    CGContextSetStrokeColorWithColor(context, [[UIColor redColor] CGColor]);
+    CGContextSetLineWidth(context, 5.0);
+    //Teile die undefinierte Strecke in n gleich breite wie hohe teilstrecken
+    int n = floor(tPoint.x-fPoint.x)/self.lineHeightPx;
+    CGContextMoveToPoint(context, fPoint.x, 0);
+    //Zeichne in jede volle Teilstrecke gelbe linien, die andeuten, dass der wert undefiniert ist.
+    for (int i=0;i<=n;i++){
+      if(i==0){
+        CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx/3.);
+        CGContextMoveToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx);
+        CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), 0);
+      }else{
+        CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx/3.);
+        CGContextMoveToPoint(context, fPoint.x+(self.lineHeightPx*i), self.lineHeightPx/3.);
+        CGContextAddLineToPoint(context, fPoint.x+(self.lineHeightPx*i), 0);
+      }
+    }
+    CGContextAddLineToPoint(context,tPoint.x,0);
+  }else if(fPoint.y==-1&&tPoint.y==-1){
+    NSLog(@"undef nach undef");
   }
   
   
@@ -178,16 +199,40 @@
     for (int i=0; i<[self.cgPoints count]-1; i++) {
       //Draw every Pair of Points
       CGPoint from,to;
-    //TODO?Wenn das Punktpaar in den zu zeichnenden Intervallgrenzen liegt, zeichne es
-      from=CGPointMake([[self.cgPoints objectAtIndex:i]CGPointValue].x*self.timeUnitLengthInPx, [[self.cgPoints objectAtIndex:i]CGPointValue].y);
-      to=CGPointMake([[self.cgPoints objectAtIndex:i+1]CGPointValue].x*self.timeUnitLengthInPx, [[self.cgPoints objectAtIndex:i+1]CGPointValue].y);
+//      NSLog(@"from : %f to : %f",self.simTimeFrom,self.simTimeTo);
+//      NSLog(@"pointfromt : %f pointtot : %f",[[self.cgPoints objectAtIndex:i] CGPointValue].x,[[self.cgPoints objectAtIndex:i+1] CGPointValue].x);
+      
+      //Get two corresponding points
+      from=CGPointMake([[self.cgPoints objectAtIndex:i]CGPointValue].x, [[self.cgPoints objectAtIndex:i]CGPointValue].y);
+      to=CGPointMake([[self.cgPoints objectAtIndex:i+1]CGPointValue].x, [[self.cgPoints objectAtIndex:i+1]CGPointValue].y);
+      //Only plot them if in interval to be plotted.
+      //Pair not in interval
+      if(self.simTimeFrom>to.x || self.simTimeTo<from.x)
+        continue;
+      
+      //from not in interval, to is
+      if(from.x<self.simTimeFrom&&to.x<=self.simTimeTo&&to.x>=self.simTimeFrom){
+        from.x=self.simTimeFrom;
+      }//from in interval, to not
+      else if(from.x>=self.simTimeFrom&&from.x<=self.simTimeTo&&to.x>self.simTimeTo){
+        to.x=self.simTimeTo;
+      }//both points in interval
+      //Scaling
+      from.x*=self.timeUnitLengthInPx;
+      to.x*=self.timeUnitLengthInPx;
       [self drawIntervallFromPoint:from toPoint:to inContext:context];
     
     }
     //Manually add a last Point
-    CGPoint from=CGPointMake([[self.cgPoints lastObject] CGPointValue].x*self.timeUnitLengthInPx, [[self.cgPoints lastObject] CGPointValue].y);
-    [self drawIntervallFromPoint:from
-                         toPoint:CGPointMake(rect.size.width, [[self.cgPoints lastObject] CGPointValue].y) inContext:context];
+    
+    CGPoint from=CGPointMake([[self.cgPoints lastObject] CGPointValue].x, [[self.cgPoints lastObject] CGPointValue].y);
+    if(from.x<=self.simTimeTo){
+      if(from.x<self.simTimeFrom)
+        from.x=self.simTimeFrom;
+      from.x*=self.timeUnitLengthInPx;
+      [self drawIntervallFromPoint:from
+                           toPoint:CGPointMake(self.simTimeTo*self.timeUnitLengthInPx, [[self.cgPoints lastObject] CGPointValue].y) inContext:context];
+    }
   }
   
 }

@@ -24,7 +24,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  NSString *vcdFile = @"very_simple";
+  NSString *vcdFile = @"simple";
   self.signalRectHeight=50;
   self.signalDrawHeight=40;
   self.signalTimeUnitInPx=3;
@@ -32,11 +32,11 @@
   self.parser = [[VCDParser alloc] initWithVCDFile:path];
   [self.parser parse];
   [self.signalTable setRowHeight:self.signalRectHeight];
-  //Put Random SimTimes
+  //Standard : 
   self.simTimeFrom=0;
-  self.simTimeTo=[[parser.timesArray lastObject]floatValue];
+  self.simTimeTo=1200;
   
-  CGFloat signalDisplayLengthPx=[[parser.timesArray lastObject]floatValue]*self.signalTimeUnitInPx;
+  CGFloat signalDisplayLengthPx=self.simTimeTo*self.signalTimeUnitInPx;
   self.signalScrView.contentSize = CGSizeMake(signalDisplayLengthPx, [[parser.signalDict allValues] count]*self.signalRectHeight);
   signalViewNameDict = [[NSMutableDictionary alloc]init];
   //For Each Signal create Signal Views,add them as Subviews and put the viewReference|View into the Dictionary.
@@ -49,6 +49,8 @@
     sv.signalName=s.name;
     sv.backgroundColor=[UIColor clearColor];
     sv.timeUnitLengthInPx=self.signalTimeUnitInPx;
+    sv.simTimeFrom=self.simTimeFrom;
+    sv.simTimeTo=self.simTimeTo;
     [self.signalScrView addSubview:sv]; 
     [signalViewNameDict setObject:sv forKey:s.name];
     r.origin.y+=self.signalRectHeight;
