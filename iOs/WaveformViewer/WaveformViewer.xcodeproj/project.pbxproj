@@ -35,6 +35,7 @@
 		DE04DC4316BFD08000D7A59F /* very_simple.vcd in Resources */ = {isa = PBXBuildFile; fileRef = DE04DC3F16BFD08000D7A59F /* very_simple.vcd */; };
 		DE04DC4616BFE16800D7A59F /* SignalView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC4516BFE16800D7A59F /* SignalView.m */; };
 		DE04DC4716BFE16800D7A59F /* SignalView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC4516BFE16800D7A59F /* SignalView.m */; };
+		DEBFC1F316FFB34C00293DA5 /* TimeAxisView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBFC1F216FFB34C00293DA5 /* TimeAxisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		DE04DC3F16BFD08000D7A59F /* very_simple.vcd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = very_simple.vcd; sourceTree = "<group>"; };
 		DE04DC4416BFE16800D7A59F /* SignalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalView.h; sourceTree = "<group>"; };
 		DE04DC4516BFE16800D7A59F /* SignalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalView.m; sourceTree = "<group>"; };
+		DEBFC1F116FFB34C00293DA5 /* TimeAxisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAxisView.h; sourceTree = "<group>"; };
+		DEBFC1F216FFB34C00293DA5 /* TimeAxisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeAxisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				DE04DC0D16BFB8DA00D7A59F /* MainStoryboard.storyboard */,
 				DE04DC1016BFB8DA00D7A59F /* ViewController.h */,
 				DE04DC1116BFB8DA00D7A59F /* ViewController.m */,
+				DEBFC1F116FFB34C00293DA5 /* TimeAxisView.h */,
+				DEBFC1F216FFB34C00293DA5 /* TimeAxisView.m */,
 				DE04DC4416BFE16800D7A59F /* SignalView.h */,
 				DE04DC4516BFE16800D7A59F /* SignalView.m */,
 				DE04DBFC16BFB8DA00D7A59F /* Supporting Files */,
@@ -330,6 +335,7 @@
 				DE04DC3516BFBE9400D7A59F /* Signal.m in Sources */,
 				DE04DC3716BFBE9400D7A59F /* VCDParser.m in Sources */,
 				DE04DC4616BFE16800D7A59F /* SignalView.m in Sources */,
+				DEBFC1F316FFB34C00293DA5 /* TimeAxisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

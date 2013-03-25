@@ -12,30 +12,29 @@
 
 #import "ViewController.h"
 #import "SignalView.h"
-
+#import "TimeAxisView.h"
 @interface ViewController ()
 - (void) setSignalRectHeight:(CGFloat) height;
 - (void) setSignalDrawHeight:(CGFloat) height;
 @end
 
 @implementation ViewController
-@synthesize parser,signalRectHeight=_signalHeight,signalViewNameDict,signalDrawHeight=_signalDrawHeight,simTimeFrom,simTimeTo,timerswitch;
+@synthesize parser,signalRectHeight=_signalHeight,signalViewNameDict,signalDrawHeight=_signalDrawHeight,simTimeFrom,simTimeTo,timerswitch,isTimeAxisVisible;
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  NSString *vcdFile = @"very_simple";
+  NSString *vcdFile = @"simple";
   self.signalRectHeight=60;
   self.signalDrawHeight=50;
-  self.signalTimeUnitInPx=3;
+  self.signalTimeUnitInPx=INITIALSIGNALTIMEUNITPX;
   NSString *path = [[NSBundle mainBundle] pathForResource:vcdFile ofType:@"vcd"];
   self.parser = [[VCDParser alloc] initWithVCDFile:path];
   [self.parser parse];
   [self.signalTable setRowHeight:self.signalRectHeight];
   //Standard :
   self.simTimeFrom=0;
-  self.simTimeTo=90;
-  
+  self.simTimeTo=800;
   CGFloat signalDisplayLengthPx=(self.simTimeTo-self.simTimeFrom)*self.signalTimeUnitInPx;
   self.signalScrView.contentSize = CGSizeMake(signalDisplayLengthPx, [[parser.signalDict allValues] count]*self.signalRectHeight);
   signalViewNameDict = [[NSMutableDictionary alloc]init];
@@ -71,7 +70,10 @@
   }
 
   }
-
+- (void)viewDidAppear:(BOOL)animated{
+  self.containerView.min=self.simTimeFrom;
+  self.containerView.max=self.simTimeFrom+self.signalScrView.bounds.size.width/self.signalTimeUnitInPx;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -106,8 +108,13 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
   if(scrollView==self.signalScrView){
     [self.signalTable setContentOffset:CGPointMake(0,scrollView.contentOffset.y)];
+    //KV-Observing should do it, buts too late *_*
+    self.containerView.min=self.simTimeFrom+scrollView.contentOffset.x/self.signalTimeUnitInPx;
+    self.containerView.max=self.simTimeFrom+scrollView.contentOffset.x/self.signalTimeUnitInPx+self.signalScrView.bounds.size.width/self.signalTimeUnitInPx;
+    [self.containerView setNeedsDisplay];
   }
 }
+
 //********************************************************************************************
 
 ///**** UITableViewDelegate Methods ************************************************
@@ -118,11 +125,17 @@
 //********************************************************************************************
 
 //**** Gesture Recognizers *******************************************************************
+
+
 - (void)signalsDoubleTap:(UITapGestureRecognizer *)gesture{
   if(gesture.state == UIGestureRecognizerStateEnded){
     self.signalTimeUnitInPx=INITIALSIGNALTIMEUNITPX;
+    //KV-Observing should do it, buts too late *_*
     [self updateSignalViewsWithNewSignalTime];
   }
+  self.containerView.min=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx;
+  self.containerView.max=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx+self.signalScrView.bounds.size.width/self.signalTimeUnitInPx;
+  [self.containerView setNeedsDisplay];
 }
 - (void)signalsSingleTap:(UITapGestureRecognizer *)gesture{
   //Remove all subviews blabla
@@ -139,6 +152,9 @@
     if(self.signalTimeUnitInPx<MINSIGNALTIMEUNITPX)
       self.signalTimeUnitInPx=MINSIGNALTIMEUNITPX;
     [self updateSignalViewsWithNewSignalTime];
+    self.containerView.min=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx;
+    self.containerView.max=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx+self.signalScrView.bounds.size.width/self.signalTimeUnitInPx;
+    [self.containerView setNeedsDisplay];
   }
 }
 - (void)signalToogleTimeGrid:(UILongPressGestureRecognizer *)gesture{
@@ -153,6 +169,32 @@
 - (void)signalRotation:(UIRotationGestureRecognizer *)gesture{
   
 }
+
+- (IBAction)toogleTimeAxis:(id)sender {
+  
+  if(isTimeAxisVisible){
+    //[self.signalScrView addSubview:[[TimeAxisView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)]];
+    
+    [self.containerView setOpaque:YES];
+    [self.containerView setBackgroundColor:[UIColor clearColor]];
+    [self.containerView setAlpha:1.0];
+    [self.toolbarBtnTimeAxis setTitle:@"Show Time Axis"];
+    //Remove Time Axis Overlay
+    self.containerView.enabled = NO;
+    isTimeAxisVisible=NO;
+  }else{
+    [self.containerView setOpaque:NO];
+    [self.containerView setBackgroundColor:[UIColor clearColor]];
+    [self.containerView setAlpha:0.5];
+    [self.containerView setBackgroundColor:[UIColor blackColor]];
+    [self.toolbarBtnTimeAxis setTitle:@"Hide Time Axis"];
+    //Add some TimeAxis Overlay
+    isTimeAxisVisible=YES;
+    self.containerView.enabled = YES;
+  }
+}
+
+
 //********************************************************************************************
 - (void) updateSignalViewsWithNewSimTime{
   for (int i=0; i<[[self.parser.signalDict allValues] count]; i++) {
