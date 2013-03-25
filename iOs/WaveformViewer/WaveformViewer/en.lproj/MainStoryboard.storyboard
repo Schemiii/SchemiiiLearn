@@ -35,7 +35,7 @@
                                     <constraint firstItem="4Qk-AC-nEW" firstAttribute="leading" secondItem="1Xc-sy-iS1" secondAttribute="leading" type="default" id="6Ig-pR-OPQ"/>
                                     <constraint firstAttribute="bottom" secondItem="4Qk-AC-nEW" secondAttribute="bottom" constant="-64" id="QGN-fu-oDp"/>
                                     <constraint firstItem="4Qk-AC-nEW" firstAttribute="top" secondItem="1Xc-sy-iS1" secondAttribute="top" type="default" id="aTP-bJ-zen"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Qk-AC-nEW" secondAttribute="trailing" constant="102" id="cRx-vk-ndF"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Qk-AC-nEW" secondAttribute="trailing" constant="99" id="nS6-PO-1EK"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -63,6 +63,11 @@
                         <barButtonItem title="Show Time Axis" id="ueB-uy-aji">
                             <connections>
                                 <action selector="toogleTimeAxis:" destination="2" id="8LD-o7-aZO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="ChangeSimulationTime" id="mph-3W-vVF">
+                            <connections>
+                                <segue destination="FkS-Jf-Pzt" kind="modal" identifier="popTimeOptions" modalPresentationStyle="pageSheet" id="Grh-Yv-g2w"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -106,6 +111,86 @@
             </objects>
             <point key="canvasLocation" x="1674" y="18"/>
         </scene>
+        <!--Option View Controller-->
+        <scene sceneID="hhE-5o-hPs">
+            <objects>
+                <viewController id="sIQ-Z9-s7m" customClass="OptionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tTl-22-VaS">
+                        <rect key="frame" x="0.0" y="64" width="768" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Start Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvb-nX-pxP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="DsB-zW-pdb"/>
+                                    <constraint firstAttribute="height" constant="21" id="YQf-G0-SCQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="End Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HO-tZ-5dZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="ag6-MJ-Rrf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i0G-LR-7dZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Nwv-ND-S2o"/>
+                                    <constraint firstAttribute="width" constant="97" id="abi-bd-yfQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sIQ-Z9-s7m" id="Hxi-65-um0"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIb-Jg-jpr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3hN-MM-g1I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sIQ-Z9-s7m" id="sow-0h-nH0"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HIb-Jg-jpr" firstAttribute="top" secondItem="tTl-22-VaS" secondAttribute="top" constant="305" id="4Ji-xE-yk1"/>
+                            <constraint firstItem="HIb-Jg-jpr" firstAttribute="trailing" secondItem="i0G-LR-7dZ" secondAttribute="trailing" type="default" id="5uM-cE-mym"/>
+                            <constraint firstItem="HIb-Jg-jpr" firstAttribute="baseline" secondItem="1HO-tZ-5dZ" secondAttribute="baseline" type="default" id="69z-i4-7Jb"/>
+                            <constraint firstItem="Hvb-nX-pxP" firstAttribute="top" secondItem="tTl-22-VaS" secondAttribute="top" constant="252" id="7h6-5z-s0U"/>
+                            <constraint firstItem="HIb-Jg-jpr" firstAttribute="leading" secondItem="i0G-LR-7dZ" secondAttribute="leading" type="default" id="F1n-g7-8oa"/>
+                            <constraint firstItem="i0G-LR-7dZ" firstAttribute="centerX" secondItem="tTl-22-VaS" secondAttribute="centerX" type="default" id="PTH-yH-Prm"/>
+                            <constraint firstItem="1HO-tZ-5dZ" firstAttribute="top" secondItem="tTl-22-VaS" secondAttribute="top" constant="309" id="TkI-x4-zvw"/>
+                            <constraint firstItem="1HO-tZ-5dZ" firstAttribute="leading" secondItem="Hvb-nX-pxP" secondAttribute="leading" type="default" id="Txg-VP-BcB"/>
+                            <constraint firstItem="Hvb-nX-pxP" firstAttribute="top" secondItem="i0G-LR-7dZ" secondAttribute="top" type="default" id="gdL-ec-8tm"/>
+                            <constraint firstItem="i0G-LR-7dZ" firstAttribute="leading" secondItem="Hvb-nX-pxP" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="z5z-0f-L98"/>
+                            <constraint firstItem="i0G-LR-7dZ" firstAttribute="baseline" secondItem="Hvb-nX-pxP" secondAttribute="baseline" type="default" id="zG2-8p-kxI"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gh1-iC-WW9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="gqX-jo-kUz">
+                            <connections>
+                                <action selector="finishEditingOptions:" destination="sIQ-Z9-s7m" id="Ts5-xx-DmS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="txtEnd" destination="HIb-Jg-jpr" id="ry2-8p-Zkr"/>
+                        <outlet property="txtStart" destination="i0G-LR-7dZ" id="xOD-NP-F0D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAp-NP-wEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3943" y="-10"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7JF-7X-lCF">
             <objects>
@@ -128,6 +213,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tO1-P5-bSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="700" y="18"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nq1-qy-B7K">
+            <objects>
+                <navigationController id="FkS-Jf-Pzt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PL4-Y7-70x">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sIQ-Z9-s7m" kind="relationship" relationship="rootViewController" id="dwO-Xg-Tyr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Wf-sH-Xky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2969" y="-10"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -36,6 +36,7 @@
 		DE04DC4616BFE16800D7A59F /* SignalView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC4516BFE16800D7A59F /* SignalView.m */; };
 		DE04DC4716BFE16800D7A59F /* SignalView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE04DC4516BFE16800D7A59F /* SignalView.m */; };
 		DEBFC1F316FFB34C00293DA5 /* TimeAxisView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBFC1F216FFB34C00293DA5 /* TimeAxisView.m */; };
+		DEBFC1F616FFDD4700293DA5 /* OptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBFC1F516FFDD4700293DA5 /* OptionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		DE04DC4516BFE16800D7A59F /* SignalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalView.m; sourceTree = "<group>"; };
 		DEBFC1F116FFB34C00293DA5 /* TimeAxisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAxisView.h; sourceTree = "<group>"; };
 		DEBFC1F216FFB34C00293DA5 /* TimeAxisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeAxisView.m; sourceTree = "<group>"; };
+		DEBFC1F416FFDD4700293DA5 /* OptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionViewController.h; sourceTree = "<group>"; };
+		DEBFC1F516FFDD4700293DA5 /* OptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				DE04DC0416BFB8DA00D7A59F /* AppDelegate.h */,
 				DE04DC0516BFB8DA00D7A59F /* AppDelegate.m */,
 				DE04DC0D16BFB8DA00D7A59F /* MainStoryboard.storyboard */,
+				DEBFC1F416FFDD4700293DA5 /* OptionViewController.h */,
+				DEBFC1F516FFDD4700293DA5 /* OptionViewController.m */,
 				DE04DC1016BFB8DA00D7A59F /* ViewController.h */,
 				DE04DC1116BFB8DA00D7A59F /* ViewController.m */,
 				DEBFC1F116FFB34C00293DA5 /* TimeAxisView.h */,
@@ -336,6 +341,7 @@
 				DE04DC3716BFBE9400D7A59F /* VCDParser.m in Sources */,
 				DE04DC4616BFE16800D7A59F /* SignalView.m in Sources */,
 				DEBFC1F316FFB34C00293DA5 /* TimeAxisView.m in Sources */,
+				DEBFC1F616FFDD4700293DA5 /* OptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

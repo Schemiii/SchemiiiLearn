@@ -34,11 +34,18 @@
   [self.signalTable setRowHeight:self.signalRectHeight];
   //Standard :
   self.simTimeFrom=0;
-  self.simTimeTo=800;
+  self.simTimeTo=101;
+  
+  signalViewNameDict = [[NSMutableDictionary alloc]init];
+
+  [self setup];
+  }
+- (void) setup{
+  for (UIView *mv in self.signalScrView.subviews) {
+    [mv removeFromSuperview];
+  }
   CGFloat signalDisplayLengthPx=(self.simTimeTo-self.simTimeFrom)*self.signalTimeUnitInPx;
   self.signalScrView.contentSize = CGSizeMake(signalDisplayLengthPx, [[parser.signalDict allValues] count]*self.signalRectHeight);
-  signalViewNameDict = [[NSMutableDictionary alloc]init];
-  //For Each Signal create Signal Views,add them as Subviews and put the viewReference|View into the Dictionary.
   CGRect r;
   r.origin.x=0;
   r.size.height=self.signalRectHeight;
@@ -50,7 +57,7 @@
     sv.timeUnitLengthInPx=self.signalTimeUnitInPx;
     sv.simTimeFrom=self.simTimeFrom;
     sv.simTimeTo=self.simTimeTo;
-    [self.signalScrView addSubview:sv]; 
+    [self.signalScrView addSubview:sv];
     [signalViewNameDict setObject:sv forKey:s.name];
     r.origin.y+=self.signalRectHeight;
   }
@@ -68,11 +75,10 @@
       }
     }
   }
-
-  }
+}
 - (void)viewDidAppear:(BOOL)animated{
-  self.containerView.min=self.simTimeFrom;
-  self.containerView.max=self.simTimeFrom+self.signalScrView.bounds.size.width/self.signalTimeUnitInPx;
+  self.containerView.min=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx;
+  self.containerView.max=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx+self.containerView.bounds.size.width/self.signalTimeUnitInPx;
 }
 - (void)didReceiveMemoryWarning
 {
@@ -109,8 +115,8 @@
   if(scrollView==self.signalScrView){
     [self.signalTable setContentOffset:CGPointMake(0,scrollView.contentOffset.y)];
     //KV-Observing should do it, buts too late *_*
-    self.containerView.min=self.simTimeFrom+scrollView.contentOffset.x/self.signalTimeUnitInPx;
-    self.containerView.max=self.simTimeFrom+scrollView.contentOffset.x/self.signalTimeUnitInPx+self.signalScrView.bounds.size.width/self.signalTimeUnitInPx;
+    self.containerView.min=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx;
+    self.containerView.max=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx+self.containerView.bounds.size.width/self.signalTimeUnitInPx;
     [self.containerView setNeedsDisplay];
   }
 }
@@ -134,7 +140,7 @@
     [self updateSignalViewsWithNewSignalTime];
   }
   self.containerView.min=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx;
-  self.containerView.max=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx+self.signalScrView.bounds.size.width/self.signalTimeUnitInPx;
+  self.containerView.max=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx+self.containerView.bounds.size.width/self.signalTimeUnitInPx;
   [self.containerView setNeedsDisplay];
 }
 - (void)signalsSingleTap:(UITapGestureRecognizer *)gesture{
@@ -153,7 +159,7 @@
       self.signalTimeUnitInPx=MINSIGNALTIMEUNITPX;
     [self updateSignalViewsWithNewSignalTime];
     self.containerView.min=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx;
-    self.containerView.max=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx+self.signalScrView.bounds.size.width/self.signalTimeUnitInPx;
+    self.containerView.max=self.simTimeFrom+self.signalScrView.contentOffset.x/self.signalTimeUnitInPx+self.containerView.bounds.size.width/self.signalTimeUnitInPx;
     [self.containerView setNeedsDisplay];
   }
 }
@@ -194,7 +200,34 @@
   }
 }
 
-
+//*****OptionDelegate Methods*******
+- (BOOL)willFinishWithStartSim:(NSInteger)start andEndSim:(NSInteger)endSim{
+  if(endSim<=start)
+    return NO;
+  else
+    //Maybe an intervall would be more usefull, but's ok for now..
+    return YES;
+}
+- (void)didFinishWithStartSim:(NSInteger)start andEndSim:(NSInteger)endSim{
+  self.simTimeFrom=start;
+  self.simTimeTo = endSim;
+  [self setup];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+  if([segue.identifier isEqualToString:@"popTimeOptions"]){
+      UINavigationController *nav=(UINavigationController*) [segue destinationViewController];
+    nav.delegate=self;
+  }
+}
+//**** Navigation protocol****
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+  
+  if(viewController){
+    if([viewController respondsToSelector:@selector(setOptiondelegate:)]){
+      [viewController performSelector:@selector(setOptiondelegate:)withObject:self];
+    }
+  }
+}
 //********************************************************************************************
 - (void) updateSignalViewsWithNewSimTime{
   for (int i=0; i<[[self.parser.signalDict allValues] count]; i++) {

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OptionViewController.h"
 #import "VCDParser.h"
 @class TimeAxisView;
-@interface ViewController : UIViewController<UITableViewDataSource,UIScrollViewDelegate>
+@interface ViewController : UIViewController<UITableViewDataSource,UIScrollViewDelegate,OptionDelegate,UINavigationControllerDelegate>
 @property (weak,nonatomic)  IBOutlet UIScrollView *signalScrView;
 @property (weak,nonatomic)  IBOutlet UITableView *signalTable;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *signalTableWidth;
